@@ -125,7 +125,1576 @@ footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid 
   section.summary-card{padding:4px 16px 8px}
 }
 </style>
-</head>
+<style data-polish>/* ==========================================================================
+   Polish Layer — Investigative Technical Dossier & Interview Rhythm
+   Palette: Deep Ink-Blue / Steel Slate / Cool Alabaster / Restrained Amber
+   ========================================================================== */
+
+:root {
+  /* Cool archival slate paper (Light Mode) */
+  --bg: #f3f5f8;
+  --surface: #ffffff;
+  --surface-elev: #eef2f7;
+  --ink: #0f172a;
+  --ink-soft: #1e293b;
+  --muted: #465366;
+  --line: #d6dde8;
+  --line-strong: #b8c4d6;
+  --accent: #d9773a;
+  --accent-ink: #a34a08;
+  --accent-soft: rgba(217, 119, 58, 0.12);
+  --accent-glow: rgba(217, 119, 58, 0.28);
+  --note: #eaeff6;
+  --code: #e4eaf3;
+  --link: #1a4f82;
+  --link-hover: #0e355c;
+  --card: #f7f9fc;
+  --card-line: #cdd6e4;
+  --shadow: 0 12px 32px rgba(11, 19, 36, 0.08), 0 2px 6px rgba(11, 19, 36, 0.04);
+  --shadow-lg: 0 20px 48px rgba(11, 19, 36, 0.12), 0 4px 12px rgba(11, 19, 36, 0.06);
+
+  /* Dossier masthead & persistent ink-blue chrome */
+  --hero-bg: #0c1320;
+  --hero-bg-2: #121c2e;
+  --hero-ink: #f1f5fb;
+  --hero-muted: #a6b6cc;
+  --hero-line: rgba(148, 168, 198, 0.2);
+  --hero-grid: rgba(148, 168, 198, 0.065);
+  --hero-amber: #f0a150;
+
+  /* Nav bar chrome */
+  --nav-bg: rgba(11, 17, 28, 0.92);
+  --nav-ink: #cbd5e4;
+  --nav-ink-active: #ffffff;
+  --nav-line: rgba(148, 168, 198, 0.18);
+  --nav-pill-hover: rgba(148, 168, 198, 0.14);
+
+  /* Timecode capsules & transcript quote cards */
+  --ts-bg: #e9eff7;
+  --ts-border: #c1cde0;
+  --ts-ink: #162d4c;
+  --ts-glyph: #b5540c;
+  --ts-hover-bg: #0f172a;
+  --ts-hover-ink: #f8fafc;
+  --ts-hover-glyph: #f0a150;
+
+  --quote-bg: #ffffff;
+  --quote-border: #cbd5e4;
+  --quote-rail: #c3cfe0;
+  --quote-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+
+  --mark-bg: rgba(217, 119, 58, 0.15);
+  --selection-bg: rgba(217, 119, 58, 0.22);
+  --selection-ink: #0f172a;
+  --plate-border: #cfd8e6;
+  --plate-bg: #f9f7f4;
+
+  /* Spine & Side TOC */
+  --rail-track: rgba(70, 83, 102, 0.22);
+  --rail-tick: rgba(70, 83, 102, 0.48);
+  --rail-quote-tick: #c96824;
+  --rail-active: #b8560d;
+  --rail-pill-bg: #0f172a;
+  --rail-pill-ink: #f8fafc;
+
+  /* Typography */
+  --font-sans: "PingFang TC", "Hiragino Sans CNS", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #090e17;
+    --surface: #101724;
+    --surface-elev: #151f30;
+    --ink: #e5ecf6;
+    --ink-soft: #cfd9e8;
+    --muted: #93a4bc;
+    --line: rgba(148, 168, 198, 0.17);
+    --line-strong: rgba(148, 168, 198, 0.3);
+    --accent: #e58e3c;
+    --accent-ink: #f0a357;
+    --accent-soft: rgba(229, 142, 60, 0.14);
+    --accent-glow: rgba(229, 142, 60, 0.34);
+    --note: #121b2b;
+    --code: #182336;
+    --link: #7eb8ee;
+    --link-hover: #a7d1f7;
+    --card: #121a29;
+    --card-line: rgba(148, 168, 198, 0.22);
+    --shadow: 0 14px 38px rgba(0, 0, 0, 0.46), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(0, 0, 0, 0.35);
+
+    --hero-bg: #0c1321;
+    --hero-bg-2: #121d31;
+    --hero-ink: #f0f5fc;
+    --hero-muted: #9eb0c9;
+    --hero-line: rgba(148, 168, 198, 0.2);
+    --hero-grid: rgba(148, 168, 198, 0.06);
+    --hero-amber: #f0a357;
+
+    --nav-bg: rgba(9, 14, 23, 0.9);
+    --nav-ink: #9eb0c9;
+    --nav-ink-active: #f3f7fc;
+    --nav-line: rgba(148, 168, 198, 0.16);
+    --nav-pill-hover: rgba(148, 168, 198, 0.12);
+
+    --ts-bg: #172236;
+    --ts-border: rgba(148, 168, 198, 0.28);
+    --ts-ink: #dce6f5;
+    --ts-glyph: #f0a357;
+    --ts-hover-bg: #e58e3c;
+    --ts-hover-ink: #090e17;
+    --ts-hover-glyph: #090e17;
+
+    --quote-bg: #111929;
+    --quote-border: rgba(148, 168, 198, 0.22);
+    --quote-rail: rgba(148, 168, 198, 0.28);
+    --quote-shadow: 0 12px 32px rgba(0, 0, 0, 0.38);
+
+    --mark-bg: rgba(229, 142, 60, 0.2);
+    --selection-bg: rgba(229, 142, 60, 0.32);
+    --selection-ink: #f8fafc;
+    --plate-border: rgba(148, 168, 198, 0.24);
+    --plate-bg: #141c2b;
+
+    --rail-track: rgba(148, 168, 198, 0.2);
+    --rail-tick: rgba(148, 168, 198, 0.44);
+    --rail-quote-tick: #e58e3c;
+    --rail-active: #f0a357;
+    --rail-pill-bg: #f0a357;
+    --rail-pill-ink: #090e17;
+  }
+}
+
+/* Base & Scrollbar Polish */
+html {
+  overflow-x: clip;
+  scrollbar-color: var(--line-strong) transparent;
+  scrollbar-width: thin;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17.5px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-ink);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Focus & Skip Link */
+:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip {
+  background: var(--hero-bg);
+  color: var(--hero-amber);
+  border: 1px solid var(--hero-amber);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.skip:focus {
+  left: 12px;
+  top: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Sticky Top Navigation + Reading Progress Rail
+   ========================================================================== */
+nav.toc {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-line);
+  backdrop-filter: blur(14px) saturate(1.25);
+  -webkit-backdrop-filter: blur(14px) saturate(1.25);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+nav.toc ul {
+  max-width: 1120px;
+  min-height: 48px;
+  padding: 0 18px;
+  gap: 2px;
+}
+
+nav.toc a {
+  color: var(--nav-ink);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 6px 11px;
+  min-height: 32px;
+  line-height: 1.4;
+  border-radius: 6px;
+  position: relative;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+nav.toc a:hover,
+nav.toc a:focus-visible {
+  background: var(--nav-pill-hover);
+  color: var(--nav-ink-active);
+}
+
+nav.toc a.is-current,
+nav.toc a[aria-current="location"] {
+  color: var(--hero-amber);
+  background: rgba(240, 161, 80, 0.12);
+  font-weight: 700;
+}
+
+/* Reading Progress Bar (injected inside nav.toc) */
+.pl-progress-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: rgba(148, 168, 198, 0.14);
+  pointer-events: none;
+  overflow: visible;
+}
+
+.pl-progress-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--hero-amber));
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+.pl-progress-notches {
+  position: absolute;
+  inset: -1px 0 0;
+  pointer-events: none;
+}
+
+.pl-progress-notch {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 4px;
+  background: rgba(240, 161, 80, 0.55);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1240px) {
+  .pl-progress-notches {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Page Container & Architectural Dossier Masthead (header.hero)
+   ========================================================================== */
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+header.hero {
+  position: relative;
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding: 44px 48px 36px;
+  text-align: left;
+  border-radius: 14px;
+  background:
+    linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(0deg, var(--hero-grid) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(155deg, var(--hero-bg) 0%, var(--hero-bg-2) 100%);
+  border: 1px solid var(--hero-line);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Top signal hairline rule (no military iconography; pure technical memo rule) */
+header.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--hero-amber) 0%, var(--hero-amber) 140px, rgba(148, 168, 198, 0.25) 140px, rgba(148, 168, 198, 0.08) 100%);
+}
+
+header.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(240, 161, 80, 0.12);
+  border: 1px solid rgba(240, 161, 80, 0.34);
+  color: var(--hero-amber);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+header.hero .eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--hero-amber);
+}
+
+header.hero h1 {
+  margin: 0 0 18px;
+  max-width: none;
+  color: var(--hero-ink);
+  font-size: clamp(1.5rem, 1.1rem + 1.9vw, 2.55rem);
+  font-weight: 800;
+  line-height: 1.28;
+  letter-spacing: -0.012em;
+  font-feature-settings: "palt" 1, "kern" 1;
+  text-wrap: balance;
+}
+
+header.hero p.lede {
+  margin: 0 0 20px;
+  max-width: 66ch;
+  color: var(--hero-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+header.hero p.byline {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--hero-line);
+  color: var(--hero-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* Subtle hero entrance when JS enhances and motion is allowed */
+html.pl-js.pl-anim header.hero .eyebrow,
+html.pl-js.pl-anim header.hero h1,
+html.pl-js.pl-anim header.hero .lede,
+html.pl-js.pl-anim header.hero .byline {
+  animation: plFadeRise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+html.pl-js.pl-anim header.hero h1 { animation-delay: 0.06s; }
+html.pl-js.pl-anim header.hero .lede { animation-delay: 0.12s; }
+html.pl-js.pl-anim header.hero .byline { animation-delay: 0.18s; }
+
+@keyframes plFadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Main Article Flow & Typography
+   ========================================================================== */
+article {
+  max-width: 720px;
+  margin: 0 auto;
+  counter-reset: pl-sec;
+}
+
+article p {
+  margin: 0 0 1.25em;
+  color: var(--ink);
+  line-break: strict;
+  text-wrap: pretty;
+}
+
+article a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--link) 42%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.16s ease, text-decoration-color 0.16s ease;
+}
+
+article a:hover {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Standard inline emphasis */
+article p strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mid-sentence inline direct quotes (preserve flow without dangling punctuation) */
+article p strong.pl-inline-quote {
+  background: linear-gradient(180deg, transparent 58%, var(--mark-bg) 58%);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Timestamp Capsules (Core Interactive Element — Never Intercept Clicks)
+   ========================================================================== */
+article a[href*="youtube.com/watch"][href*="&t="] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28em;
+  padding: 0.08em 0.48em 0.08em 0.38em;
+  margin: 0 0.1em;
+  border-radius: 4px;
+  background: var(--ts-bg);
+  border: 1px solid var(--ts-border);
+  color: var(--ts-ink);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: 0.05em;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+article a[href*="youtube.com/watch"][href*="&t="]::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 3.5px solid transparent;
+  border-bottom: 3.5px solid transparent;
+  border-left: 5.5px solid var(--ts-glyph);
+  transition: border-left-color 0.16s ease;
+}
+
+article a[href*="youtube.com/watch"][href*="&t="]:hover,
+article a[href*="youtube.com/watch"][href*="&t="]:focus-visible {
+  background: var(--ts-hover-bg);
+  border-color: var(--ts-hover-bg);
+  color: var(--ts-hover-ink);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px var(--accent-glow);
+}
+
+article a[href*="youtube.com/watch"][href*="&t="]:hover::before,
+article a[href*="youtube.com/watch"][href*="&t="]:focus-visible::before {
+  border-left-color: var(--ts-hover-glyph);
+}
+
+/* Target pulse when navigated from the 44-minute Time Spine */
+article a[href*="youtube.com/watch"][href*="&t="].pl-ts-flash {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #090e17;
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+article a[href*="youtube.com/watch"][href*="&t="].pl-ts-flash::before {
+  border-left-color: #090e17;
+}
+
+/* ==========================================================================
+   Chapter Transitions (article h2[id^="sec-"]) & Subheadings (h3)
+   ========================================================================== */
+article h2[id^="sec-"] {
+  counter-increment: pl-sec;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 14px;
+  row-gap: 4px;
+  margin: 68px 0 22px;
+  padding: 20px 0 0;
+  margin-left: 0;
+  border-left: 0;
+  border-top: 1px solid var(--line-strong);
+  font-size: clamp(1.38rem, 1.15rem + 0.8vw, 1.72rem);
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  scroll-margin-top: 72px;
+  font-feature-settings: "palt" 1, "kern" 1;
+}
+
+/* Amber top precision rule segment */
+article h2[id^="sec-"]::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+}
+
+/* Monumental monospace chapter index (works even without JS!) */
+article h2[id^="sec-"]::before {
+  content: counter(pl-sec, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-ink);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+/* Dynamically attached timestamp span for sections with video quotes */
+.pl-sec-range {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-elev);
+  border: 1px solid var(--line);
+  align-self: center;
+  white-space: nowrap;
+}
+
+article h3 {
+  position: relative;
+  margin: 42px 0 14px;
+  padding-left: 16px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+article h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.48em;
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--accent);
+}
+
+/* ==========================================================================
+   Transcript Quote Cards (Second Signature Feature — Part A)
+   Cleanly-bounded direct quotes elevated into transcript-rail blocks
+   ========================================================================== */
+article p strong.pl-quote-card {
+  position: relative;
+  display: block;
+  margin: 1.45em 0;
+  padding: 1.18em 1.4em 1.18em 5.9em;
+  border-radius: 10px;
+  background: var(--quote-bg);
+  border: 1px solid var(--quote-border);
+  box-shadow: var(--quote-shadow);
+  font-size: 1.09rem;
+  font-weight: 700;
+  line-height: 1.68;
+  color: var(--ink);
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* Left vertical transcript timeline rail */
+article p strong.pl-quote-card::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 4.55em;
+  width: 1px;
+  background: var(--quote-rail);
+}
+
+/* Left timeline node dot */
+article p strong.pl-quote-card::after {
+  content: "";
+  position: absolute;
+  top: 1.65em;
+  left: calc(4.55em - 4px);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--quote-bg), 0 0 0 4.5px var(--accent-glow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article p strong.pl-quote-card:hover,
+article p strong.pl-quote-card.is-active {
+  border-color: color-mix(in srgb, var(--accent) 62%, var(--quote-border));
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1), 0 0 0 1px var(--accent-soft);
+}
+
+article p strong.pl-quote-card.is-active::after {
+  transform: scale(1.2);
+}
+
+/* Left gutter monospace timecode label (purely derived from existing timestamp) */
+.pl-quote-time {
+  position: absolute;
+  left: 0.9em;
+  top: 1.42em;
+  width: 3.4em;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-ink);
+  letter-spacing: 0.02em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Editorial Callout Notes (aside.note)
+   ========================================================================== */
+article aside.note {
+  position: relative;
+  margin: 1.6em 0 1.8em;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background: var(--note);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--link);
+  font-size: 15.5px;
+  line-height: 1.72;
+  color: var(--ink-soft);
+}
+
+article aside.note p:last-child,
+article aside.note ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Timestamped key-takeaway notes adopt the transcript-rail language */
+article aside.note.pl-note-transcript {
+  padding: 16px 20px 16px 6.1em;
+  border-left: 3px solid var(--accent);
+  background: var(--quote-bg);
+  border-color: var(--quote-border);
+  border-left-color: var(--accent);
+  box-shadow: var(--quote-shadow);
+  color: var(--ink);
+  font-size: 16px;
+}
+
+article aside.note.pl-note-transcript::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 4.8em;
+  width: 1px;
+  background: var(--quote-rail);
+}
+
+article aside.note.pl-note-transcript::after {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: calc(4.8em - 3.5px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--quote-bg), 0 0 0 4px var(--accent-glow);
+}
+
+article aside.note.pl-note-transcript .pl-quote-time {
+  top: 19px;
+  left: 0.85em;
+  width: 3.6em;
+}
+
+/* ==========================================================================
+   Figures & Exhibits (Preserve section-figure translateX(-50%)!)
+   ========================================================================== */
+figure.hero-figure {
+  max-width: 820px;
+  margin: 24px auto 28px;
+}
+
+article figure.section-figure {
+  /* Explicitly preserve centering transform from original stylesheet */
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: min(860px, calc(100vw - 32px));
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+figure picture {
+  display: block;
+}
+
+figure img {
+  border-radius: 10px;
+  border: 1px solid var(--plate-border);
+  background: var(--plate-bg);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.24s ease, border-color 0.24s ease, transform 0.24s ease;
+}
+
+figure img:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--plate-border));
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  figure img {
+    filter: brightness(0.92) contrast(1.03);
+    background: #f9f7f4;
+  }
+  figure img:hover {
+    filter: brightness(0.97) contrast(1.03);
+  }
+}
+
+figcaption,
+p.figcap {
+  margin: 12px auto 0;
+  max-width: 720px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted);
+  text-align: left;
+}
+
+p.figcap {
+  margin: -10px auto 1.8em;
+}
+
+/* ==========================================================================
+   Technical Memorandum Tables
+   ========================================================================== */
+.table-scroll {
+  margin: 28px 0 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+.table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.62;
+}
+
+.table-scroll thead th {
+  background: var(--hero-bg);
+  color: var(--hero-ink);
+  font-weight: 700;
+  font-size: 13.5px;
+  letter-spacing: 0.04em;
+  padding: 13px 16px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.table-scroll tbody td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  transition: background-color 0.15s ease;
+}
+
+.table-scroll tbody tr:hover td {
+  background: var(--surface-elev);
+}
+
+.table-scroll tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table-scroll td.k {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.table-scroll tbody tr:last-child td.k {
+  color: var(--accent-ink);
+}
+
+/* ==========================================================================
+   Lists, Fact-Check Section, Sources Ledger & Footer
+   ========================================================================== */
+article ul:not(.sources) {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.2em 0 1.6em;
+}
+
+article ul:not(.sources) li {
+  position: relative;
+  padding: 14px 18px 14px 22px;
+  margin: 0 0 12px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(11, 19, 36, 0.03);
+}
+
+article ol.takeaways {
+  padding-left: 1.6em;
+}
+
+article ol.takeaways li {
+  margin: 0.85em 0;
+}
+
+article ol.takeaways li::marker {
+  font-family: var(--font-mono);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+/* Sources Ledger */
+article ul.sources {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  counter-reset: pl-src;
+  border-top: 1px solid var(--line-strong);
+}
+
+article ul.sources li {
+  counter-increment: pl-src;
+  position: relative;
+  margin: 0;
+  padding: 12px 0 12px 36px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+article ul.sources li::before {
+  content: counter(pl-src, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-ink);
+}
+
+article ul.sources li a {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--link);
+}
+
+footer {
+  max-width: 720px;
+  margin: 72px auto 0;
+  padding: 20px 0 0;
+  border-top: 2px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   Lightbox Visual Polish (Preserves Existing JS Behavior)
+   ========================================================================== */
+.lightbox {
+  background: rgba(6, 10, 18, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lightbox img {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 168, 198, 0.25);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65);
+}
+
+.lightbox button {
+  background: var(--hero-bg);
+  color: var(--hero-ink);
+  border: 1px solid rgba(148, 168, 198, 0.35);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.lightbox button:hover,
+.lightbox button:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #090e17;
+}
+
+/* ==========================================================================
+   Desktop Left Chapter Navigation Rail (>= 1260px)
+   ========================================================================== */
+.pl-side-toc {
+  display: none;
+}
+
+@media (min-width: 1260px) {
+  .pl-side-toc {
+    display: block;
+    position: fixed;
+    top: 92px;
+    left: max(18px, calc(50% - 690px));
+    width: 186px;
+    max-height: calc(100vh - 124px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    z-index: 40;
+    padding: 8px 0;
+  }
+
+  .pl-side-toc::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pl-side-toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .pl-side-toc li {
+    margin: 0;
+  }
+
+  .pl-side-toc a {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 6px 10px 6px 12px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    border-radius: 0 6px 6px 0;
+    transition: color 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+  }
+
+  .pl-side-toc a:hover,
+  .pl-side-toc a:focus-visible {
+    color: var(--ink);
+    background: var(--surface-elev);
+    border-left-color: var(--line-strong);
+  }
+
+  .pl-side-toc a.is-current,
+  .pl-side-toc a[aria-current="location"] {
+    color: var(--ink);
+    font-weight: 700;
+    border-left-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .pl-side-toc .pl-toc-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  .pl-side-toc a.is-current .pl-toc-num,
+  .pl-side-toc a[aria-current="location"] .pl-toc-num {
+    color: var(--accent-ink);
+  }
+}
+
+/* ==========================================================================
+   Second Signature Feature — Part B:
+   44-Minute Full-Interview Time Spine (Desktop Right >= 1220px)
+   Pure navigational visualization; labels strictly from page mm:ss timestamps
+   ========================================================================== */
+.pl-time-spine {
+  display: none;
+}
+
+@media (min-width: 1220px) {
+  .pl-time-spine {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 50%;
+    right: max(18px, calc(50% - 690px));
+    transform: translateY(-50%);
+    height: min(68vh, 560px);
+    width: 96px;
+    z-index: 45;
+    padding: 4px 0;
+    user-select: none;
+  }
+
+  .pl-spine-cap {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    padding: 3px 2px;
+    line-height: 1;
+  }
+
+  .pl-spine-track {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  /* Hairline spine axis */
+  .pl-spine-axis {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 14px;
+    width: 2px;
+    background: var(--rail-track);
+    border-radius: 999px;
+  }
+
+  /* Active amber progress fill along spine */
+  .pl-spine-fill {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    width: 2px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 999px;
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  /* Live reading position beacon + mm:ss readout */
+  .pl-spine-cursor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+    z-index: 6;
+    transition: top 0.22s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.18s ease;
+  }
+
+  .pl-spine-cursor-label {
+    margin-right: 26px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--rail-pill-bg);
+    color: var(--rail-pill-ink);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    transition: opacity 0.14s ease;
+  }
+
+  .pl-time-spine:hover .pl-spine-cursor-label,
+  .pl-time-spine:focus-within .pl-spine-cursor-label {
+    opacity: 0.14;
+  }
+
+  .pl-spine-cursor-dot {
+    position: absolute;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--rail-active);
+    box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent-glow);
+  }
+
+  /* Individual timestamp tick button */
+  .pl-spine-tick {
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 34px;
+    height: 12px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 3;
+  }
+
+  .pl-spine-tick::after {
+    content: "";
+    display: block;
+    margin-right: 11px;
+    width: 8px;
+    height: 1.5px;
+    border-radius: 999px;
+    background: var(--rail-tick);
+    transition: width 0.16s ease, background-color 0.16s ease, height 0.16s ease;
+  }
+
+  /* Major quote ticks stand out cleanly in amber */
+  .pl-spine-tick.is-quote {
+    z-index: 4;
+  }
+
+  .pl-spine-tick.is-quote::after {
+    width: 15px;
+    height: 2.5px;
+    background: var(--rail-quote-tick);
+    margin-right: 11px;
+  }
+
+  .pl-spine-track {
+    cursor: pointer;
+  }
+
+  .pl-spine-tick.is-snap,
+  .pl-spine-tick:hover,
+  .pl-spine-tick:focus-visible {
+    z-index: 8;
+  }
+
+  .pl-spine-tick:focus-visible {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .pl-spine-tick.is-snap::after,
+  .pl-spine-tick:hover::after,
+  .pl-spine-tick:focus-visible::after {
+    width: 20px;
+    height: 3px;
+    background: var(--rail-active);
+  }
+
+  .pl-spine-tick.is-current::after {
+    width: 18px;
+    height: 2.5px;
+    background: var(--rail-active);
+  }
+
+  /* Hover / focus timecode tooltip (strictly mm:ss from page) */
+  .pl-spine-tip {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%) translateX(4px);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: var(--hero-bg);
+    color: var(--hero-ink);
+    border: 1px solid var(--hero-line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.3;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.14s ease, transform 0.14s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .pl-spine-tick.is-snap .pl-spine-tip,
+  .pl-spine-tick:hover .pl-spine-tip,
+  .pl-spine-tick:focus-visible .pl-spine-tip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* ==========================================================================
+   Scroll Reveal (Progressive Enhancement — Never Hidden Without JS)
+   ========================================================================== */
+html.pl-js.pl-anim .pl-reveal {
+  opacity: 0;
+  transition: opacity 0.52s cubic-bezier(0.22, 1, 0.36, 1), transform 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Never apply translateY on figure.section-figure (preserves translateX(-50%)) */
+html.pl-js.pl-anim .pl-reveal:not(.section-figure) {
+  transform: translateY(14px);
+}
+
+html.pl-js.pl-anim .pl-reveal.is-in {
+  opacity: 1;
+}
+
+html.pl-js.pl-anim .pl-reveal:not(.section-figure).is-in {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Mobile 390px First-Screen Optimization)
+   ========================================================================== */
+@media (max-width: 760px) {
+  .page {
+    padding: 0 16px 72px;
+  }
+
+  header.hero {
+    margin: 14px auto 0;
+    padding: 24px 20px 20px;
+    border-radius: 12px;
+  }
+
+  article h2[id^="sec-"] {
+    margin-top: 52px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line-strong);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+    line-height: 1.78;
+  }
+
+  nav.toc ul {
+    min-height: 44px;
+    padding: 0 12px;
+  }
+
+  nav.toc a {
+    font-size: 13px;
+    padding: 5px 10px;
+    min-height: 30px;
+  }
+
+  /* Compact masthead so 390px viewport displays BOTH title & cover SVG above fold */
+  header.hero {
+    margin: 10px auto 0;
+    padding: 18px 16px 16px;
+    border-radius: 10px;
+  }
+
+  header.hero .eyebrow {
+    margin-bottom: 10px;
+    padding: 3px 8px;
+    font-size: 11.5px;
+  }
+
+  header.hero h1 {
+    font-size: clamp(1.32rem, 1.05rem + 1.8vw, 1.65rem);
+    line-height: 1.28;
+    margin-bottom: 10px;
+  }
+
+  header.hero p.lede {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+
+  header.hero p.byline {
+    font-size: 11.5px;
+    padding-top: 8px;
+  }
+
+  article figure.hero-figure {
+    margin: 14px auto 18px;
+  }
+
+  article figure.hero-figure picture img {
+    max-width: 268px;
+    margin: 0 auto;
+  }
+
+  /* Transcript Quote Cards adapt cleanly to narrow screens */
+  article p strong.pl-quote-card {
+    padding: 2.55em 1.05em 1.05em 1.15em;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  article p strong.pl-quote-card::before {
+    top: 2.05em;
+    bottom: auto;
+    left: 1.15em;
+    right: 1.05em;
+    width: auto;
+    height: 1px;
+  }
+
+  article p strong.pl-quote-card::after {
+    top: 1.12em;
+    left: 1.15em;
+    width: 8px;
+    height: 8px;
+  }
+
+  article p strong.pl-quote-card .pl-quote-time {
+    top: 0.92em;
+    left: 2.4em;
+    width: auto;
+    text-align: left;
+  }
+
+  article aside.note.pl-note-transcript {
+    padding: 2.5em 1.05em 1em 1.15em;
+    font-size: 15px;
+  }
+
+  article aside.note.pl-note-transcript::before {
+    top: 2.05em;
+    bottom: auto;
+    left: 1.15em;
+    right: 1.05em;
+    width: auto;
+    height: 1px;
+  }
+
+  article aside.note.pl-note-transcript::after {
+    top: 1.1em;
+    left: 1.15em;
+  }
+
+  article aside.note.pl-note-transcript .pl-quote-time {
+    top: 0.9em;
+    left: 2.35em;
+    width: auto;
+    text-align: left;
+  }
+
+  /* Responsive table card polish */
+  .table-scroll {
+    border-radius: 10px;
+  }
+
+  .table-scroll tbody tr {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .table-scroll td {
+    padding: 4px 0;
+  }
+
+  .table-scroll td::before {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .table-scroll td.k {
+    color: var(--accent-ink);
+    font-size: 15.5px;
+  }
+
+  .pl-sec-range {
+    font-size: 11.5px;
+  }
+}
+
+/* ==========================================================================
+   Reduced Motion Compliance
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html.pl-js.pl-anim .pl-reveal,
+  html.pl-js.pl-anim .pl-reveal:not(.section-figure) {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html.pl-js.pl-anim header.hero .eyebrow,
+  html.pl-js.pl-anim header.hero h1,
+  html.pl-js.pl-anim header.hero .lede,
+  html.pl-js.pl-anim header.hero .byline {
+    animation: none !important;
+  }
+
+  .pl-spine-fill,
+  .pl-spine-cursor,
+  .pl-spine-tick::after,
+  .pl-spine-tip,
+  figure img {
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Clean Print Stylesheet
+   ========================================================================== */
+@media print {
+  html.pl-js.pl-anim .pl-reveal,
+  html.pl-js.pl-anim .pl-reveal:not(.section-figure) {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  .skip,
+  nav.toc,
+  .pl-side-toc,
+  .pl-time-spine,
+  .pl-progress-track,
+  .lightbox {
+    display: none !important;
+  }
+
+  .page {
+    max-width: none;
+    padding: 0;
+  }
+
+  header.hero {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 0;
+    border-bottom: 2px solid #111111;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 12pt;
+    margin: 0 0 16pt;
+  }
+
+  header.hero::before {
+    display: none;
+  }
+
+  header.hero .eyebrow,
+  header.hero h1,
+  header.hero p.lede,
+  header.hero p.byline {
+    color: #111111 !important;
+    background: transparent !important;
+    border-color: #999999 !important;
+  }
+
+  article {
+    max-width: none;
+  }
+
+  article figure.section-figure {
+    margin-left: 0;
+    transform: none;
+    width: 100%;
+    break-inside: avoid;
+  }
+
+  figure,
+  aside.note,
+  article p strong.pl-quote-card,
+  .table-scroll tr {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  article p strong.pl-quote-card,
+  article aside.note,
+  .table-scroll {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border-color: #cccccc !important;
+  }
+
+  article a[href*="youtube.com/watch"][href*="&t="] {
+    background: transparent !important;
+    border-color: #999999 !important;
+    color: #111111 !important;
+  }
+}
+</style></head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
 <nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="一分鐘學會、十分鐘封頂">技能天花板</a></li><li><a href="#sec-2" title="賣給 Facebook 的那筆帳">賣給 FB</a></li><li><a href="#sec-3" title="為什麼不打官司">不打官司</a></li><li><a href="#sec-4" title="從出資人變成創辦人">出資到創辦</a></li><li><a href="#sec-5" title="自主武器與戰爭的未來">自主武器</a></li><li><a href="#sec-6" title="他最怕的 AI 用途">最怕的 AI</a></li><li><a href="#sec-7" title="千元汽車與海上城市">千元汽車</a></li><li><a href="#sec-8" title="對照公開資料">對照資料</a></li><li><a href="#sec-9" title="重點結論與實際啟示">結論</a></li><li><a href="#sec-10" title="製作說明：這篇導讀由 AI 模型完成">製作說明</a></li><li><a href="#sec-11" title="來源清單">來源</a></li></ul></nav>
@@ -235,5 +1804,627 @@ footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid 
   });
 })();
 </script>
-</body>
+<script data-polish>/* Polish Layer Script — Investigative Dossier & 44-Minute Interview Time Spine */
+(function () {
+  'use strict';
+
+  var doc = document;
+  var root = doc.documentElement;
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  root.classList.add('pl-js');
+  if (!reducedMotion) {
+    root.classList.add('pl-anim');
+  }
+
+  function el(tag, attrs, text) {
+    var node = doc.createElement(tag);
+    if (attrs) {
+      var keys = Object.keys(attrs);
+      for (var i = 0; i < keys.length; i++) {
+        node.setAttribute(keys[i], attrs[keys[i]]);
+      }
+    }
+    if (typeof text === 'string') {
+      node.textContent = text;
+    }
+    return node;
+  }
+
+  function parseTimestampSeconds(href) {
+    if (!href) return null;
+    var m = href.match(/[?&]t=(\d+)s?/i);
+    if (!m) return null;
+    var sec = parseInt(m[1], 10);
+    return isNaN(sec) ? null : sec;
+  }
+
+  function pad2(n) {
+    return n < 10 ? '0' + n : String(n);
+  }
+
+  var article = doc.querySelector('main article') || doc.querySelector('article');
+  if (!article) return;
+
+  var tocNav = doc.querySelector('nav.toc');
+  var tocLinks = tocNav ? Array.prototype.slice.call(tocNav.querySelectorAll('a[href^="#sec-"]')) : [];
+  var sections = Array.prototype.slice.call(article.querySelectorAll('h2[id^="sec-"]'));
+
+  /* Map section id -> short nav title and full h2 title (strictly existing text) */
+  var shortTitleById = {};
+  var tocLinkById = {};
+  tocLinks.forEach(function (a) {
+    var href = a.getAttribute('href') || '';
+    var id = href.slice(1);
+    if (id) {
+      shortTitleById[id] = (a.textContent || '').trim();
+      tocLinkById[id] = a;
+    }
+  });
+
+  /* Helper: find owning h2 section for any element inside article */
+  function findSectionFor(node) {
+    var cur = node;
+    while (cur && cur !== article) {
+      if (cur.parentNode === article) break;
+      cur = cur.parentNode;
+    }
+    while (cur) {
+      if (cur.nodeType === 1 && cur.tagName === 'H2' && cur.id && cur.id.indexOf('sec-') === 0) {
+        return cur;
+      }
+      cur = cur.previousElementSibling;
+    }
+    return null;
+  }
+
+  /* ------------------------------------------------------------------------
+     1. Enhance Transcript Quote Cards & Timestamped Notes
+     ------------------------------------------------------------------------ */
+  var quoteTimestamps = new Set();
+  var quoteCardEntries = [];
+  var trailingPunctRe = /^[。，、；：！？）」]/;
+  var strongs = Array.prototype.slice.call(article.querySelectorAll('p > strong'));
+
+  strongs.forEach(function (strong) {
+    var tsLink = strong.querySelector('a[href*="youtube.com/watch"][href*="&t="]');
+    if (!tsLink) return;
+
+    var rawText = (strong.textContent || '').trim();
+    var hasQuoteMark = rawText.indexOf('「') !== -1;
+    if (!hasQuoteMark) return;
+
+    var sec = parseTimestampSeconds(tsLink.getAttribute('href'));
+    var label = (tsLink.textContent || '').trim();
+    if (sec === null || !label) return;
+
+    /* Check whether elevating to a block card would leave dangling punctuation */
+    var nextNode = strong.nextSibling;
+    var nextText = nextNode && nextNode.nodeType === 3 ? nextNode.nodeValue : '';
+    var prevNode = strong.previousSibling;
+    var prevText = prevNode && prevNode.nodeType === 3 ? prevNode.nodeValue.trim() : '';
+
+    var hasDanglingNext = trailingPunctRe.test(nextText);
+    var endsWithBareConnector = /[但而與及和說]$/.test(prevText);
+
+    quoteTimestamps.add(tsLink);
+
+    if (!hasDanglingNext && !endsWithBareConnector) {
+      strong.classList.add('pl-quote-card');
+      var badge = el('span', {
+        'class': 'pl-quote-time',
+        'data-polish': 'quote-time',
+        'aria-hidden': 'true'
+      }, label);
+      strong.insertBefore(badge, strong.firstChild);
+      quoteCardEntries.push({ el: strong, tsLink: tsLink, sec: sec });
+    } else {
+      strong.classList.add('pl-inline-quote');
+    }
+  });
+
+  /* Enhance timestamped aside.note blocks with transcript-rail styling */
+  var notes = Array.prototype.slice.call(article.querySelectorAll('aside.note'));
+  notes.forEach(function (note) {
+    var tsLink = note.querySelector('a[href*="youtube.com/watch"][href*="&t="]');
+    if (!tsLink) return;
+    var label = (tsLink.textContent || '').trim();
+    if (!label) return;
+    note.classList.add('pl-note-transcript');
+    quoteTimestamps.add(tsLink);
+    var badge = el('span', {
+      'class': 'pl-quote-time',
+      'data-polish': 'quote-time',
+      'aria-hidden': 'true'
+    }, label);
+    note.insertBefore(badge, note.firstChild);
+    quoteCardEntries.push({ el: note, tsLink: tsLink, sec: parseTimestampSeconds(tsLink.getAttribute('href')) });
+  });
+
+  /* ------------------------------------------------------------------------
+     2. Collect All YouTube Timestamps & Section Ranges
+     ------------------------------------------------------------------------ */
+  var allTsLinks = Array.prototype.slice.call(
+    article.querySelectorAll('a[href*="youtube.com/watch"][href*="&t="]')
+  );
+
+  var tsItems = [];
+  var sectionTsMap = {};
+
+  allTsLinks.forEach(function (a, domIdx) {
+    var sec = parseTimestampSeconds(a.getAttribute('href'));
+    var label = (a.textContent || '').trim();
+    if (sec === null || !label) return;
+
+    var ownerH2 = findSectionFor(a);
+    var secId = ownerH2 ? ownerH2.id : '';
+    var item = {
+      el: a,
+      sec: sec,
+      label: label,
+      domIdx: domIdx,
+      secId: secId,
+      secTitle: ownerH2 ? (ownerH2.textContent || '').trim() : '',
+      isQuote: quoteTimestamps.has(a)
+    };
+    tsItems.push(item);
+
+    if (secId) {
+      if (!sectionTsMap[secId]) sectionTsMap[secId] = [];
+      sectionTsMap[secId].push(item);
+    }
+  });
+
+  /* Attach existing-timestamp span metadata (first — last mm:ss) to h2 headings */
+  sections.forEach(function (h2) {
+    var list = sectionTsMap[h2.id];
+    if (!list || list.length < 2) return;
+    var minItem = list[0];
+    var maxItem = list[0];
+    list.forEach(function (it) {
+      if (it.sec < minItem.sec) minItem = it;
+      if (it.sec > maxItem.sec) maxItem = it;
+    });
+    var firstLabel = minItem.label;
+    var lastLabel = maxItem.label;
+    if (firstLabel && lastLabel && minItem.sec !== maxItem.sec) {
+      var rangeEl = el('span', {
+        'class': 'pl-sec-range',
+        'data-polish': 'sec-range',
+        'aria-hidden': 'true'
+      }, firstLabel + ' – ' + lastLabel);
+      h2.appendChild(rangeEl);
+    }
+  });
+
+  /* Chronologically sorted timestamps for the 44-minute Interview Time Spine */
+  var sortedTs = tsItems.slice().sort(function (a, b) {
+    return a.sec - b.sec || a.domIdx - b.domIdx;
+  });
+
+  var maxSec = sortedTs.length ? sortedTs[sortedTs.length - 1].sec : 0;
+  var minLabel = sortedTs.length ? sortedTs[0].label : '';
+  var maxLabel = sortedTs.length ? sortedTs[sortedTs.length - 1].label : '';
+
+  /* ------------------------------------------------------------------------
+     3. Top Reading Progress Bar (with Mobile Quote-Rhythm Notches)
+     ------------------------------------------------------------------------ */
+  var progressFill = null;
+  if (tocNav) {
+    var track = el('div', {
+      'class': 'pl-progress-track',
+      'data-polish': 'progress-bar',
+      'aria-hidden': 'true'
+    });
+    progressFill = el('div', { 'class': 'pl-progress-fill', 'data-polish': 'progress-fill' });
+    track.appendChild(progressFill);
+
+    if (maxSec > 0) {
+      var notches = el('div', { 'class': 'pl-progress-notches', 'data-polish': 'progress-notches' });
+      sortedTs.forEach(function (item) {
+        if (!item.isQuote) return;
+        var pct = (item.sec / maxSec) * 100;
+        var notch = el('span', { 'class': 'pl-progress-notch', 'data-polish': 'progress-notch' });
+        notch.style.left = pct.toFixed(2) + '%';
+        notches.appendChild(notch);
+      });
+      track.appendChild(notches);
+    }
+
+    tocNav.appendChild(track);
+  }
+
+  /* ------------------------------------------------------------------------
+     4. Desktop Left Chapter Navigation Rail (derived from h2 + nav.toc)
+     ------------------------------------------------------------------------ */
+  var sideTocLinks = {};
+  if (sections.length) {
+    var sideNav = el('nav', {
+      'class': 'pl-side-toc',
+      'data-polish': 'side-toc',
+      'aria-label': tocNav ? (tocNav.getAttribute('aria-label') || '章節導覽') : '章節導覽'
+    });
+    var ol = el('ol', { 'data-polish': 'side-toc-list' });
+
+    sections.forEach(function (h2, idx) {
+      var id = h2.id;
+      var fullTitle = '';
+      for (var c = 0; c < h2.childNodes.length; c++) {
+        if (h2.childNodes[c].nodeType === 3) {
+          fullTitle += h2.childNodes[c].nodeValue;
+        }
+      }
+      fullTitle = fullTitle.trim() || (h2.textContent || '').trim();
+      var shortTitle = shortTitleById[id] || fullTitle;
+
+      var li = el('li', { 'data-polish': 'side-toc-item' });
+      var link = el('a', {
+        'href': '#' + id,
+        'title': fullTitle,
+        'data-polish': 'side-toc-link'
+      });
+      var num = el('span', {
+        'class': 'pl-toc-num',
+        'data-polish': 'side-toc-num',
+        'aria-hidden': 'true'
+      }, pad2(idx + 1));
+      var txt = el('span', { 'data-polish': 'side-toc-text' }, shortTitle);
+
+      link.appendChild(num);
+      link.appendChild(txt);
+      li.appendChild(link);
+      ol.appendChild(li);
+      sideTocLinks[id] = link;
+    });
+
+    sideNav.appendChild(ol);
+    doc.body.appendChild(sideNav);
+  }
+
+  /* ------------------------------------------------------------------------
+     5. Second Signature Feature — 44-Minute Full-Interview Time Spine
+     ------------------------------------------------------------------------ */
+  var spineFill = null;
+  var spineCursor = null;
+  var spineCursorLabel = null;
+  var tickByItem = new Map();
+  var flashTimer = null;
+  var lastFlashed = null;
+
+  function scrollToTimestamp(item) {
+    if (!item || !item.el) return;
+    var rect = item.el.getBoundingClientRect();
+    var targetY = window.scrollY + rect.top - Math.round(window.innerHeight * 0.34);
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: reducedMotion ? 'auto' : 'smooth'
+    });
+
+    if (lastFlashed) {
+      lastFlashed.classList.remove('pl-ts-flash');
+    }
+    item.el.classList.add('pl-ts-flash');
+    lastFlashed = item.el;
+    clearTimeout(flashTimer);
+    flashTimer = setTimeout(function () {
+      if (lastFlashed) {
+        lastFlashed.classList.remove('pl-ts-flash');
+        lastFlashed = null;
+      }
+    }, 1800);
+  }
+
+  if (sortedTs.length >= 2 && maxSec > 0) {
+    var spineNav = el('nav', {
+      'class': 'pl-time-spine',
+      'data-polish': 'time-spine',
+      'aria-label': minLabel + '–' + maxLabel
+    });
+
+    var topCap = el('span', {
+      'class': 'pl-spine-cap',
+      'data-polish': 'spine-cap',
+      'aria-hidden': 'true'
+    }, minLabel);
+
+    var spineTrack = el('div', { 'class': 'pl-spine-track', 'data-polish': 'spine-track' });
+    var spineAxis = el('div', {
+      'class': 'pl-spine-axis',
+      'data-polish': 'spine-axis',
+      'aria-hidden': 'true'
+    });
+    spineFill = el('div', {
+      'class': 'pl-spine-fill',
+      'data-polish': 'spine-fill',
+      'aria-hidden': 'true'
+    });
+
+    spineCursor = el('div', {
+      'class': 'pl-spine-cursor',
+      'data-polish': 'spine-cursor',
+      'aria-hidden': 'true'
+    });
+    spineCursorLabel = el('span', {
+      'class': 'pl-spine-cursor-label',
+      'data-polish': 'spine-cursor-label'
+    }, minLabel);
+    var spineCursorDot = el('span', {
+      'class': 'pl-spine-cursor-dot',
+      'data-polish': 'spine-cursor-dot'
+    });
+    spineCursor.appendChild(spineCursorLabel);
+    spineCursor.appendChild(spineCursorDot);
+
+    spineTrack.appendChild(spineAxis);
+    spineTrack.appendChild(spineFill);
+    spineTrack.appendChild(spineCursor);
+
+    var spineBtns = [];
+    var rovingBtn = null;
+    function setRoving(btn) {
+      if (rovingBtn === btn) return;
+      if (rovingBtn) rovingBtn.setAttribute('tabindex', '-1');
+      rovingBtn = btn;
+      btn.setAttribute('tabindex', '0');
+    }
+    spineTrack.addEventListener('keydown', function (ev) {
+      var idx = spineBtns.indexOf(document.activeElement);
+      if (idx < 0) return;
+      var next = idx;
+      if (ev.key === 'ArrowDown' || ev.key === 'ArrowRight') next = Math.min(spineBtns.length - 1, idx + 1);
+      else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') next = Math.max(0, idx - 1);
+      else if (ev.key === 'Home') next = 0;
+      else if (ev.key === 'End') next = spineBtns.length - 1;
+      else return;
+      ev.preventDefault();
+      spineBtns[next].focus();
+    });
+
+    /* Pointer: snap to the nearest tick (ticks overlap at ~3px spacing) */
+    var snapBtn = null;
+    function nearestTick(clientY) {
+      var r = spineTrack.getBoundingClientRect();
+      if (!r.height) return -1;
+      var y = clientY - r.top;
+      var best = -1, bestD = Infinity;
+      for (var k = 0; k < sortedTs.length; k++) {
+        var d = Math.abs(sortedTs[k].sec / maxSec * r.height - y);
+        if (d < bestD) { bestD = d; best = k; }
+      }
+      return best;
+    }
+    function setSnap(btn) {
+      if (snapBtn === btn) return;
+      if (snapBtn) snapBtn.classList.remove('is-snap');
+      snapBtn = btn;
+      if (btn) btn.classList.add('is-snap');
+    }
+    spineTrack.addEventListener('pointermove', function (ev) {
+      var k = nearestTick(ev.clientY);
+      setSnap(k < 0 ? null : spineBtns[k]);
+    });
+    spineTrack.addEventListener('pointerleave', function () { setSnap(null); });
+    spineTrack.addEventListener('click', function (ev) {
+      if (ev.target !== spineTrack && ev.target.closest && ev.target.closest('.pl-spine-tick')) return;
+      var k = nearestTick(ev.clientY);
+      if (k >= 0) scrollToTimestamp(sortedTs[k]);
+    });
+
+    sortedTs.forEach(function (item) {
+      var pct = Math.max(0, Math.min(100, (item.sec / maxSec) * 100));
+      var aria = item.secTitle ? (item.label + ' ' + item.secTitle) : item.label;
+      var btn = el('button', {
+        'type': 'button',
+        'class': item.isQuote ? 'pl-spine-tick is-quote' : 'pl-spine-tick',
+        'data-polish': 'time-tick',
+        'aria-label': aria
+      });
+      btn.style.top = pct.toFixed(2) + '%';
+
+      var tip = el('span', {
+        'class': 'pl-spine-tip',
+        'data-polish': 'time-tip',
+        'aria-hidden': 'true'
+      }, item.label);
+      btn.appendChild(tip);
+
+      btn.setAttribute('tabindex', '-1');
+      btn.addEventListener('click', function (ev) {
+        scrollToTimestamp(item);
+        /* keyboard activation (detail 0): move focus to the target timestamp link */
+        if (ev.detail === 0 && item.el && item.el.focus) {
+          item.el.focus({ preventScroll: true });
+        }
+      });
+      btn.addEventListener('focus', function () { setRoving(btn); });
+
+      spineTrack.appendChild(btn);
+      spineBtns.push(btn);
+      tickByItem.set(item, btn);
+    });
+
+    if (spineBtns.length) {
+      rovingBtn = spineBtns[0];
+      rovingBtn.setAttribute('tabindex', '0');
+    }
+
+    var bottomCap = el('span', {
+      'class': 'pl-spine-cap',
+      'data-polish': 'spine-cap',
+      'aria-hidden': 'true'
+    }, maxLabel);
+
+    spineNav.appendChild(topCap);
+    spineNav.appendChild(spineTrack);
+    spineNav.appendChild(bottomCap);
+    doc.body.appendChild(spineNav);
+  }
+
+  /* ------------------------------------------------------------------------
+     6. Scroll Choreography: Progress, Active Chapter, Active Quote & Spine
+     ------------------------------------------------------------------------ */
+  var currentSecId = '';
+  var currentTsItem = null;
+  var rafScheduled = false;
+
+  function setActiveSection(id) {
+    if (id === currentSecId) return;
+    currentSecId = id;
+
+    tocLinks.forEach(function (a) {
+      var isCur = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-current', isCur);
+      if (isCur) {
+        a.setAttribute('aria-current', 'location');
+        if (tocNav && a.scrollIntoView && window.innerWidth < 1260) {
+          var ul = tocNav.querySelector('ul');
+          if (ul) {
+            var targetLeft = a.offsetLeft - (ul.clientWidth - a.offsetWidth) / 2;
+            ul.scrollTo({
+              left: Math.max(0, targetLeft),
+              behavior: reducedMotion ? 'auto' : 'smooth'
+            });
+          }
+        }
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+
+    Object.keys(sideTocLinks).forEach(function (key) {
+      var a = sideTocLinks[key];
+      var isCur = key === id;
+      a.classList.toggle('is-current', isCur);
+      if (isCur) {
+        a.setAttribute('aria-current', 'location');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateScrollState() {
+    rafScheduled = false;
+
+    var scrollTop = window.scrollY || doc.documentElement.scrollTop || 0;
+    var maxScroll = Math.max(1, doc.documentElement.scrollHeight - window.innerHeight);
+    var progress = Math.max(0, Math.min(1, scrollTop / maxScroll));
+
+    if (progressFill) {
+      progressFill.style.transform = 'scaleX(' + progress.toFixed(4) + ')';
+    }
+
+    /* Active section detection */
+    var focusLine = Math.min(160, window.innerHeight * 0.25);
+    var activeId = sections.length ? sections[0].id : '';
+    for (var i = 0; i < sections.length; i++) {
+      var rect = sections[i].getBoundingClientRect();
+      if (rect.top <= focusLine) {
+        activeId = sections[i].id;
+      } else {
+        break;
+      }
+    }
+    if (activeId) setActiveSection(activeId);
+
+    /* Active quote card highlight */
+    var viewMid = window.innerHeight * 0.42;
+    quoteCardEntries.forEach(function (entry) {
+      var r = entry.el.getBoundingClientRect();
+      var inBand = r.top <= viewMid + 140 && r.bottom >= viewMid - 140;
+      entry.el.classList.toggle('is-active', inBand);
+    });
+
+    /* Sync 44-minute Time Spine to closest timestamp near reading focal line */
+    if (tsItems.length && spineFill && spineCursor && maxSec > 0) {
+      var readY = window.innerHeight * 0.36;
+      var bestItem = tsItems[0];
+      var bestDist = Infinity;
+
+      for (var j = 0; j < tsItems.length; j++) {
+        var tr = tsItems[j].el.getBoundingClientRect();
+        var dist = Math.abs(tr.top - readY);
+        /* Slightly favor timestamps already reached above focal line */
+        if (tr.top <= readY + 40 && dist < bestDist) {
+          bestDist = dist;
+          bestItem = tsItems[j];
+        } else if (bestDist === Infinity && dist < Math.abs(bestItem.el.getBoundingClientRect().top - readY)) {
+          bestItem = tsItems[j];
+        }
+      }
+
+      if (bestItem !== currentTsItem) {
+        if (currentTsItem) {
+          var prevBtn = tickByItem.get(currentTsItem);
+          if (prevBtn) prevBtn.classList.remove('is-current');
+        }
+        currentTsItem = bestItem;
+        var curBtn = tickByItem.get(bestItem);
+        if (curBtn) curBtn.classList.add('is-current');
+
+        var ratio = Math.max(0, Math.min(1, bestItem.sec / maxSec));
+        spineFill.style.transform = 'scaleY(' + ratio.toFixed(4) + ')';
+        spineCursor.style.top = (ratio * 100).toFixed(2) + '%';
+        if (spineCursorLabel) {
+          spineCursorLabel.textContent = bestItem.label;
+        }
+      }
+    }
+  }
+
+  function requestUpdate() {
+    if (!rafScheduled) {
+      rafScheduled = true;
+      window.requestAnimationFrame(updateScrollState);
+    }
+  }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', function () {
+    /* transient 1x1 viewports (e.g. screenshot capture) must not re-flip state */
+    if (window.innerWidth < 200) return;
+    requestUpdate();
+  }, { passive: true });
+  updateScrollState();
+
+  /* ------------------------------------------------------------------------
+     7. Gentle Progressive Scroll Reveal (Skipped on Reduced Motion)
+     ------------------------------------------------------------------------ */
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    var revealTargets = Array.prototype.slice.call(
+      article.querySelectorAll('h2[id^="sec-"], figure.section-figure, .table-scroll, strong.pl-quote-card, aside.note.pl-note-transcript')
+    );
+
+    var viewportH = window.innerHeight || 800;
+    var toObserve = [];
+
+    revealTargets.forEach(function (node) {
+      var rect = node.getBoundingClientRect();
+      /* Anything already near or above the initial viewport stays immediately visible */
+      if (rect.top > viewportH * 0.95) {
+        node.classList.add('pl-reveal');
+        toObserve.push(node);
+      }
+    });
+
+    if (toObserve.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -6% 0px',
+        threshold: 0.05
+      });
+
+      toObserve.forEach(function (node) {
+        io.observe(node);
+      });
+    }
+  }
+})();
+</script></body>
 </html>
