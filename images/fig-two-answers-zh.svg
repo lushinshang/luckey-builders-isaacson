@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>兩個方向相反的答案：本文歸納</title>
+<desc>本文歸納，不是 Luckey 的原話。標題：決定權和責任該落在誰身上？一邊是談被開除時，不肯把人生的掌控權交給 Facebook；另一邊是談武器出口時，主張賣給誰該由民選政府決定。兩邊之間是兩個指向相反方向的箭頭，標示兩個方向相反的答案。</desc>
+<rect width="960" height="540" fill="#fbfaf7"/>
+<text x="480" y="66" font-size="28" fill="#1d2433" font-weight="bold" text-anchor="middle">決定權和責任該落在誰身上？</text>
+<rect x="40" y="130" width="330" height="260" rx="18" fill="#f8e9dd" stroke="#d9773a" stroke-width="3"/>
+<text x="205" y="190" font-size="24" fill="#d9773a" font-weight="bold" text-anchor="middle">談被開除時</text>
+<text x="205" y="262" font-size="28" fill="#1d2433" font-weight="bold" text-anchor="middle"><tspan x="205" y="262">不肯把人生的掌控權</tspan><tspan x="205" y="306">交給 Facebook</tspan></text>
+<rect x="590" y="130" width="330" height="260" rx="18" fill="#e8eef6" stroke="#4a6fa5" stroke-width="3"/>
+<text x="755" y="190" font-size="24" fill="#4a6fa5" font-weight="bold" text-anchor="middle">談武器出口時</text>
+<text x="755" y="262" font-size="28" fill="#1d2433" font-weight="bold" text-anchor="middle"><tspan x="755" y="262">主張賣給誰該由</tspan><tspan x="755" y="306">民選政府決定</tspan></text>
+<text x="480" y="222" font-size="22" fill="#5b6170" text-anchor="middle"><tspan x="480" y="222">兩個方向</tspan><tspan x="480" y="254">相反的答案</tspan></text>
+<line x1="462" y1="300" x2="408.0" y2="300.0" stroke="#d9773a" stroke-width="5" stroke-linecap="round"/>
+<path d="M392 300 L408.0 290.4 L408.0 309.6 Z" fill="#d9773a"/>
+<line x1="498" y1="300" x2="552.0" y2="300.0" stroke="#4a6fa5" stroke-width="5" stroke-linecap="round"/>
+<path d="M568 300 L552.0 309.6 L552.0 290.4 Z" fill="#4a6fa5"/>
+<text x="920" y="486" font-size="22" fill="#5b6170" text-anchor="end">本文歸納，不是 Luckey 的原話</text>
+</svg>

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>Palmer Luckey: How Steve Jobs Ruined Everything, the $2B Oculus Sale &amp; Getting Fired From Facebook（非官方繁中譯文）</title>
+<meta name="description" content="Palmer Luckey 接受 Walter Isaacson 訪問（The Builders）全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="Palmer Luckey: How Steve Jobs Ruined Everything, the $2B Oculus Sale &amp; Getting Fired From Facebook（非官方繁中譯文）">
+<meta property="og:description" content="Palmer Luckey 接受 Walter Isaacson 訪問（The Builders）全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta property="og:image" content="https://lushinshang.github.io/luckey-builders-isaacson/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="封面示意圖：米色底上一個深色起點，數條灰色細線從起點向右上方呈扇形放射，末端各有一顆藍色小圓點，一條橘色弧線從起點向上攀升後逐漸平緩；抽象示意，圖內沒有文字。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Palmer Luckey: How Steve Jobs Ruined Everything, the $2B Oculus Sale &amp; Getting Fired From Facebook（非官方繁中譯文）">
+<meta name="twitter:description" content="Palmer Luckey 接受 Walter Isaacson 訪問（The Builders）全文繁體中文譯文，採台灣用語；非官方翻譯（AI 模型翻譯），依 YouTube 機器字幕。">
+<meta name="twitter:image" content="https://lushinshang.github.io/luckey-builders-isaacson/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/luckey-builders-isaacson/translation-zh.html">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1120px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  white-space:nowrap;-webkit-overflow-scrolling:touch;min-height:52px;align-items:center}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:inline-block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;min-height:36px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--note);color:var(--ink)}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+header.hero{padding:56px 0 8px;text-align:center}
+.eyebrow{margin:0 0 8px;color:var(--accent-ink);font-weight:700;letter-spacing:0;font-size:14px}
+h1{margin:0 auto 14px;max-width:820px;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.3;text-wrap:balance}
+.byline{margin:0 0 6px;color:var(--muted);font-size:14px}
+.video-link{margin:0 0 28px;font-size:14px}
+figure{margin:32px 0}
+figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar-d,16/9);object-fit:contain;border-radius:12px;
+  box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+@media (max-width:640px){figure picture img{aspect-ratio:var(--ar-m,9/16)}}
+@media (max-width:640px){figure.hero-figure picture img{max-width:300px;margin:0 auto}}
+figure.hero-figure{max-width:720px;margin-left:auto;margin-right:auto}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+p.figcap{margin:-18px auto 1.4em;text-align:center;font-size:14px;color:var(--muted)}
+figcaption{margin:10px auto 0;max-width:720px;font-size:14px;line-height:1.55;color:var(--muted);text-align:center}
+article{max-width:720px;margin:0 auto}
+article figure.section-figure{margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+h2{margin:56px 0 12px;font-size:1.55rem;line-height:1.4;scroll-margin-top:72px;text-wrap:balance;
+  border-left:5px solid var(--accent);padding-left:14px;margin-left:-19px}
+h3{margin:36px 0 8px;font-size:1.2rem;line-height:1.45}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.2em;padding-left:1.4em}
+li{margin:.35em 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.1em .4em;border-radius:5px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+section.summary-card{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:6px 22px 10px;margin:24px 0 8px;box-shadow:var(--shadow)}
+section.summary-card h2{margin:14px 0 8px;font-size:1.2rem;border-left:0;padding-left:0;margin-left:0}
+section.summary-card p{margin:0 0 .8em;font-size:16.5px}
+ol.takeaways{padding-left:1.6em}
+ol.takeaways li{margin:.8em 0;padding-left:.2em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources li{overflow-wrap:anywhere}
+aside.note{background:var(--note);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 1.6em;font-size:15px;color:var(--ink)}
+aside.note p,aside.note ul{margin:0 0 .6em}
+aside.note ul{padding-left:1.3em}
+figure.diagram{margin:28px 0}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;-webkit-overflow-scrolling:touch}
+.mermaid-scroll pre{margin:0;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 1.6em;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.55}
+.table-scroll th,.table-scroll td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note);font-weight:700}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.table-scroll td.nw{white-space:nowrap}
+.table-scroll.wide{margin-left:50%;transform:translateX(-50%);width:min(1040px,calc(100vw - 32px))}
+@media (max-width:640px){.table-scroll.wide{margin-left:0;transform:none;width:auto}}
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible}
+  .table-scroll table{min-width:0}
+  .table-scroll thead{position:absolute;left:-9999px}
+  .table-scroll tr,.table-scroll td{display:block}
+  .table-scroll tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .table-scroll tr:last-child{border-bottom:0}
+  .table-scroll td{padding:2px 0;border:0}
+  .table-scroll td.k{color:var(--accent-ink);white-space:normal}
+  .table-scroll td.nw{white-space:normal}
+  .table-scroll td::before{content:attr(data-label) "：";font-weight:700;color:var(--muted);font-size:13px}
+}
+
+p.lede{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px;line-height:1.65}
+footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+@media (max-width:760px){
+  h2{margin-left:0;border-left:0;padding-left:0;border-top:3px solid var(--accent);padding-top:10px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 64px}
+  header.hero{padding-top:36px}
+  h2{font-size:1.35rem}
+  section.summary-card{padding:4px 16px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="章節 1：Palmer Luckey 談被 Facebook 開除（00:00）">1·00:00</a></li><li><a href="#sec-2" title="章節 2：在家自學如何催生 Oculus（02:16）">2·02:16</a></li><li><a href="#sec-3" title="章節 3：科幻小說與虛擬實境的誕生（04:42）">3·04:42</a></li><li><a href="#sec-4" title="章節 4：賈伯斯與 iPhone 如何改變科技（06:45）">4·06:45</a></li><li><a href="#sec-5" title="章節 5：Facebook 為何以 20 億美元買下 Oculus（10:15）">5·10:15</a></li><li><a href="#sec-6" title="章節 6：Meta 的 VR 困境與 Oculus 的未來（13:06）">6·13:06</a></li><li><a href="#sec-7" title="章節 7：Palmer Luckey 後悔離開 Facebook 嗎？（16:18）">7·16:18</a></li><li><a href="#sec-8" title="章節 8：被 Facebook 開除與重新出發（17:25）">8·17:25</a></li><li><a href="#sec-9" title="章節 9：為什麼 Elon Musk 是獨一無二的創業家（19:25）">9·19:25</a></li><li><a href="#sec-10" title="章節 10：Palmer Luckey 為何創立 Anduril（21:18）">10·21:18</a></li><li><a href="#sec-11" title="章節 11：挑戰波音與洛克希德馬丁（24:05）">11·24:05</a></li><li><a href="#sec-12" title="章節 12：Anduril 的商業模式：先做再賣（25:03）">12·25:03</a></li><li><a href="#sec-13" title="章節 13：製造武器的倫理（26:18）">13·26:18</a></li><li><a href="#sec-14" title="章節 14：Lattice：Anduril 背後的 AI 大腦（28:08）">14·28:08</a></li><li><a href="#sec-15" title="章節 15：該讓 AI 不經人類核准就殺人嗎？（29:29）">15·29:29</a></li><li><a href="#sec-16" title="章節 16：自主武器之爭（31:56）">16·31:56</a></li><li><a href="#sec-17" title="章節 17：未來戰爭會由機器人取代士兵嗎？（35:06）">17·35:06</a></li><li><a href="#sec-18" title="章節 18：AI 武器能阻止與中國開戰嗎？（37:31）">18·37:31</a></li><li><a href="#sec-19" title="章節 19：人工智慧最大的危險（38:51）">19·38:51</a></li><li><a href="#sec-20" title="章節 20：自動化如何讓 1,000 美元的汽車成真（41:48）">20·41:48</a></li><li><a href="#sec-21" title="章節 21：海上城市的未來（43:13）">21·43:13</a></li><li><a href="#sec-22" title="章節 22：科幻為何能預言未來（43:52）">22·43:52</a></li></ul></nav>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">全文譯本（非官方）</p>
+<h1>Palmer Luckey: How Steve Jobs Ruined Everything, the $2B Oculus Sale &amp; Getting Fired From Facebook（非官方繁中譯文）</h1>
+<p class="lede">Palmer Luckey × Walter Isaacson，The Builders with Walter Isaacson 頻道 2026-11-17 上傳，依 YouTube 機器字幕翻譯</p>
+<p class="byline">原影片：The Builders with Walter Isaacson 頻道，2026-11-17 上傳　譯本整理：2026-11-22</p>
+</header>
+<main id="main"><article>
+<aside class="note"><p>本頁為非官方繁體中文翻譯，依 YouTube 機器字幕整理：由 AI 模型翻譯（agy gemini-3.8-flash-medium），再由 Claude Opus 5.5 讀完全部 524 句中英對照，實際變動其中 79 句（含標點正規化 4 句），未經人工校稿；存疑處由 AI（agy gemini-3.8-flash-high）聆聽原音片段核對，片段涵蓋約 107 句，但實際逐字核對的句數較少，其中 2 句依聽音改寫、1 句仍無法確認（中文為意譯），至少約 417 句不在任何聽音片段內、未對照原音，可能有誤。影片由 The Builders with Walter Isaacson 頻道上傳，版權屬原權利人，僅供閱讀與研究；若有出入，以<a href="https://www.youtube.com/watch?v=Wj00YlDuWXc" target="_blank" rel="noopener noreferrer">原影片</a>為準。本頁不標說話者：主持人 Walter Isaacson 提問，來賓 Palmer Luckey 回答；片頭 0:00–0:41 為 Luckey 的預告剪輯，0:42–2:17 為 Isaacson 的旁白。</p></aside>
+<hr>
+<h2 id="sec-1">章節 1：Palmer Luckey 談被 Facebook 開除（00:00）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=0s" target="_blank" rel="noopener noreferrer">00:00</a> 我必須做出決定：我是否要用接下來 5 年的人生當個職業受害者，整天抱怨自己被毀得多慘，抱怨因為他們對我太差，我永遠不會有出息？你基本上等於把支配你的權力交給他們。你必須承認：「噢，我對自己的人生毫無掌控權。」唯一能掌控它的只有 Facebook，也就是買下我的公司、讓它成功的那些人。所以我必須做出選擇。我是要當個職業受害者，還是要創立一家新公司，證明我不是曇花一現，證明我不是別人口中的那個笨蛋？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=30s" target="_blank" rel="noopener noreferrer">00:30</a> 而以完美的後見之明來看，我做了、我做了、我做了正確的選擇。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=42s" target="_blank" rel="noopener noreferrer">00:42</a> 當 Palmer Luckey 還是個青少年時，他整夜都在加州長堤父母家外面停放的一輛露營拖車裡工作。他打造出一個又一個原型，有時甚至用大力膠帶黏在一起。最終，他做出了一個成為 Oculus Rift 原型的成果。2014 年，在 Palmer 21 歲時，Facebook 以大約 20 億美元買下 Oculus。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=72s" target="_blank" rel="noopener noreferrer">01:12</a> 他打造出一台讓人們能夠離開現實世界、進入另一個世界的機器。但短短幾年後，Palmer 離開了 Facebook，並開始打造截然不同的東西。他的公司 Anduril 正在挑戰龐大的傳統國防承包商，並改變未來戰爭的進行方式。但他的工作引發了真正的質疑。自主武器能讓戰爭更精準並保護生命，還是只會讓殺戮變得更容易、更有距離感？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=110s" target="_blank" rel="noopener noreferrer">01:50</a> 如果人工智慧系統辨識出目標，誰該為打擊的決定負責？當戰爭的節奏開始超越人類思考的速度時，會發生什麼事？我是 Walter Isaacson，這是 The Builders，我與塑造我們未來、最具影響力的人物對談的系列節目。以下是我與 Palmer Luckey 的對話。</p>
+<h2 id="sec-2">章節 2：在家自學如何催生 Oculus（02:16）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=138s" target="_blank" rel="noopener noreferrer">02:18</a> 歡迎來到 The Builders。感謝你邀請我。嘿，你是由媽媽在家自學教育長大的。告訴我那對你在情感與交友方面的學習有什麼影響。噢，這問題很有意思。我是說，在交友方面，我有很多在家自學的朋友。我也有很多住在附近的鄰居朋友。我小時候也做了很多運動。所以我想說，在交友方面完全沒問題。在課業教育方面，我也覺得效果相當好。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=168s" target="_blank" rel="noopener noreferrer">02:48</a> 當你 14、15 歲時，你一邊修完所有高中學分，一邊修大學學分，突然間你擁有了管理自己時間的能力。而且你意識到，如果我能有效率地學習所需知識、有效率地通過考試、有效率地完成功課，那麼剩下的所有時間我就能拿來做我熱愛的事。而就我的情況來說，就是虛擬實境（VR）技術。所以對我來說非常明顯的是，如果我沒有在家自學，我的第一家公司 Oculus 就不會存在。你的朋友在多大程度上算是虛擬朋友？這又帶來了什麼改變？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=201s" target="_blank" rel="noopener noreferrer">03:21</a> 我小時候有很多現實生活中的朋友。然後隨著年齡增長，大概跟我最親近的人，都是我透過網路認識的人，以及透過我創立的電子愛好者線上社群 ModRetro，將現代科技與復古電腦、復古遊戲主機等結合。有個有趣的事實：當我創立 Oculus 時，大多數早期的硬體工程師都是我創辦的 ModRetro 論壇的其他板主和管理員。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=232s" target="_blank" rel="noopener noreferrer">03:52</a> 他們是我最熟悉、最信任的人，而且我知道他們在電子領域也非常在行。然後你找來了這個叫 Chris 的人，對吧？你以前從來沒有親自見過他。是的，Chris Dycus 是 Oculus 的第一位員工。我在某個星期五打電話給他，說：「嘿，Chris，你下個月要幹嘛？」他說：「噢，我正要在當地這家披薩店找工作，而且我正在為準備要修的課程念書。」「我秋天就要上大學了。」</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=264s" target="_blank" rel="noopener noreferrer">04:24</a> 我說：「不，你不會去。」「你要來跟我一起工作，我們要在 Oculus 打造虛擬實境頭戴式裝置。」那是我十幾歲時在做的事，而大多數孩子不會有這樣的機會。Elon Musk 深受閱讀科幻作品和某些漫畫、超級英雄漫畫的影響。你小時候讀了什麼對你產生了那樣的影響？</p>
+<h2 id="sec-3">章節 3：科幻小說與虛擬實境的誕生（04:42）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=285s" target="_blank" rel="noopener noreferrer">04:45</a> 我非常喜歡真正專注於科技本身的科幻小說。我想一個很好的例子是凡爾納（Jules Verne），凡爾納寫了《海底兩萬里》，讀這本書時很明顯可以看出來，他的目標不是講故事。而是要創造一個背景設定，藉此暢談他認為海洋科技的未來會是什麼樣子。我是說，書裡連續十幾頁都在詳述鸚鵡螺號的電池技術，</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=317s" target="_blank" rel="noopener noreferrer">05:17</a> 以及如何透過從海底提取礦物元素來充電，還有尼莫船長是如何處理這些元素的。這有點像是一個載體，用來傳遞他也許三十幾個不同的想法，然後圍繞著這些想法編織出一段故事。我一直很喜歡這類故事，因為它能讓你去思考，如果我們擁有了現在沒有的東西，世界會是什麼樣子。這也是我喜歡《星艦迷航記》（Star Trek）的原因，儘管它是共產主義設定。不過，科幻作品中有什麼東西讓你覺得「這太酷了，讓我來做做看」嗎？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=349s" target="_blank" rel="noopener noreferrer">05:49</a> 不言而喻，那就是虛擬實境的概念。那是真正吸引我的技術之一。那非常有趣，因為它顯然還沒有被實現。但這個想法是：你可以打造一種技術，騙過自己的周邊神經系統，讓它相信自己身處在一個其實不在的地方。基本上，你可以在人接收資料的那一端，打造出一個對應的鏡像。如果你能打造出一個完美的資料模擬器，好到足以說服你的蜥蜴腦，讓你相信自己已經被傳送進由你或他人創造的數位世界。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=387s" target="_blank" rel="noopener noreferrer">06:27</a> 我是說，對科技人來說，這真的是一個非常迷人的構想。因此，能夠身處科技進步到能將原本屬於科幻的事物變成科學事實的時刻，真的非常有趣。幸運的是，我出生的時代正好趕上了虛擬實境迎來這一刻。我就算再怎麼充滿熱情，如果早出生 20 年，我也絕對無法讓 Oculus 成功。</p>
+<h2 id="sec-4">章節 4：賈伯斯與 iPhone 如何改變科技（06:45）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=411s" target="_blank" rel="noopener noreferrer">06:51</a> 我對科技進步有一個理論：最偉大的進展在於人機介面，或者說人與機器如何結合在一起。而 VR 似乎是這個過程的一部分，甚至可能在 Neuralink 和我們大腦中的晶片達到頂峰。你認為科技的主要目標之一就是如何與人類介接，還是你認為它可能會拋下我們自行發展、不再需要我們？老實說，我認為整個產業完全走錯了方向。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=444s" target="_blank" rel="noopener noreferrer">07:24</a> 我認為我們一直在做蠢事。而賈伯斯（Steve Jobs）——我很愛這個人——但正是 iPhone 開啟了這一切。在 iPhone 出現之前，大家的認知是科技能夠倍增你的產出，你能藉此發揮超乎常人的工作能力。賈伯斯也深信這一點。他有句名言，把電腦稱為「心靈的腳踏車」。讓你能更有效率地完成事情，比不靠工具時走得更遠。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=476s" target="_blank" rel="noopener noreferrer">07:56</a> iPhone 的問題在於它把一切簡化到這種程度：沒錯，你不到 1 分鐘就能學會使用它。你大約花 10 分鐘就能學會發揮它的全部功能，但接著你就達到了極限天花板。問題在於每樣東西都變成了 iPhone。現在每個應用程式都是 iPhone。每個產品都是 iPhone。每個虛擬實境頭戴式裝置都是 iPhone。這些系統被設計成在第 1 分鐘就能輕易學會，在 10 分鐘內就能完全掌握，</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=508s" target="_blank" rel="noopener noreferrer">08:28</a> 卻完全沒有為願意花 1,000 小時、1 萬小時、5 萬小時精進技藝的人留下發揮空間。再也沒有更多收穫了。所以就個人而言，我很希望看到回歸到那種結合應用程式與輸入裝置、人機互動機制的設計，能夠告訴大家：這種機制需要數個月、也許數年的訓練才能真正精通，但你最後得到的，會是登峰造極的超人能力。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=543s" target="_blank" rel="noopener noreferrer">09:03</a> 我對此有些想法，但我甚至要說像 Neuralink 這類東西、某些腦機介面也是如此。我看到他們也在犯同樣的錯誤。不幸的是，就像我說的，賈伯斯用 iPhone 毀了一切。我們至今仍在承受他那令人驚嘆的產品設計所帶來的衝擊。而我希望有一天這一切能扭轉回來。好吧，讓我反駁你一下，因為當你打造 Oculus Rift 時，確實也是走賈伯斯的傳統。它完全直覺，你只要直接與電腦互動就好。沒錯。我認為這與我所說的並不矛盾。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=576s" target="_blank" rel="noopener noreferrer">09:36</a> 我只是意識到自己也是問題的一部分。我做了一個入門門檻極低、技能天花板極低的產品。任何人都會用。然後我賣出了很多台。我想正因為如此——該怎麼說才好呢？我能體認到，遵循 iPhone 模式比較容易打造出成功的產品。但我仍然可以為這對人類造成的影響感到惋惜，因為試想我們能生活在一個怎樣的世界：如果人們願意將時間投入在電腦互動技能上，如同</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=607s" target="_blank" rel="noopener noreferrer">10:07</a> 他們投入在運動、舞蹈或鋼琴上的方式一樣。我想你會看到一些不可思議的成果誕生，即使這並不適合每個人。</p>
+<h2 id="sec-5">章節 5：Facebook 為何以 20 億美元買下 Oculus（10:15）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=618s" target="_blank" rel="noopener noreferrer">10:18</a> 當要出售 Oculus 時，我知道你並不是那麼想賣，但你有幾個選擇。你有 Microsoft、你有 Google、你有 Facebook。為什麼 Facebook 是更顯而易見的合適人選？關於 2014 年你必須記住的一點是，當這個決定正在醞釀時，所有這些公司在策略上的處境都與今天截然不同。當時像 Google 和 Microsoft 這樣的公司，其 10 年計畫中根本沒有真正包含 VR。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=651s" target="_blank" rel="noopener noreferrer">10:51</a> 換句話說，他們並不是在押注 VR 會成功，當然更沒有押注它必須成功，對吧？它只是龐大帝國的另一個部分而已，不過你知道我很喜歡 Microsoft。我是 Windows 的超級重度使用者，但我清楚意識到 Microsoft 需要用來取得成功的東西是 Microsoft Office 和 Microsoft Windows。並不是把虛擬實境作為這種全新的運算媒介。Google 也是一樣的情況。而 Facebook 則處於不同的處境。Facebook 沒有自己的作業系統。他們無法掌控自己的硬體平台。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=682s" target="_blank" rel="noopener noreferrer">11:22</a> 他們完全受制於那些真正掌控這些科技平台的人。所以 Facebook 的說法是：嘿，如果你賣給其他公司，他們只會把你當成另一條業務線，如果你賺錢，那很好；如果沒賺，他們就會把你拆開當零件處理掉。反觀 Facebook 則需要你成功。如果我們買下你，我們將不惜投入一切資金，從目前的運算典範躍升至以擴增實境（AR）與虛擬實境（VR）為未來的時代。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=716s" target="_blank" rel="noopener noreferrer">11:56</a> 而且還有這種信念：如果 Facebook 處於生態系的最底層，而你透過一場新的運算革命重新洗牌整個生態系，也許 Facebook 不會拿到第一名，但他們可能就不會再墊底了，對吧？相較於 Apple、Google、Microsoft 等公司，他們在這個過程中可能往前提升好幾個名次。所以他們的說詞特別是：如果你賣給我們，我們保證在未來 10 年內每年投入 10 億美元於研發。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=747s" target="_blank" rel="noopener noreferrer">12:27</a> 當你開始精算這些數字，以及你需要賣掉多少公司股權才能籌集 100 億美元的研發資金時，以技術人的角度，你會意識到這是一筆非常了不起的交易。有趣的是，在接下來的 10 年裡，他們花的不是 100 億美元。他們花了大概 700 億美元。所以這個推論得到了證實。他們確實深信這一點。他們確實希望這能成功。他們需要這能成功。而我認為，如果我們賣給了 Google 或 Microsoft，情況就不是這樣了。我是說，我並不想在這裡批評 Google，但 Google 在我們被收購大約一年半後就關閉了他們的 VR 計畫，對吧？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=783s" target="_blank" rel="noopener noreferrer">13:03</a> 他們原本在 VR 領域競爭。後來決定不做了。幾年後他們又重新啟動，然後又把它砍了。</p>
+<h2 id="sec-6">章節 6：Meta 的 VR 困境與 Oculus 的未來（13:06）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=789s" target="_blank" rel="noopener noreferrer">13:09</a> 所以我想，如果 Oculus 當初被 Google 買下，十之八九我們早就被關掉、什麼也做不成了。但 Meta 最近才裁員了其虛擬與擴增實境（VR/AR）團隊的 10%。而且他們似乎沒有把它做成很棒的消費級產品。所以這裡有兩點需要剖析。第一點是很棒的消費級產品。我認為首先，他們花費的大部分資金都是用於研發 下一代 AR 與 VR 技術，而這些成果你未必能看得到，直到它們最終被應用到產品中。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=825s" target="_blank" rel="noopener noreferrer">13:45</a> 他們在重要且未來也將至關重要的事情上投入了數十億美元，像是深入了解如何打造特定類型的光學元件、如何打造特定類型的相機，以及打造特定類型的運算系統。而在它進入產品之前，你就是看不到這些成果。現在如果你看看像 Meta Horizon 這樣的東西，那是一款很糟的產品。大家都同意。很差勁的產品。我想就連負責這項產品的人也知道這是個很差勁的產品。而我正與 Meta 合作，我認為他們甚至不介意我說這是一款相當糟糕的產品。但我認為你不能單看那款產品以及在那裡犯下的錯誤，就把它視為代表了整個全局。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=858s" target="_blank" rel="noopener noreferrer">14:18</a> 你說得對，他們確實剛裁掉了 Reality Labs 約 10% 的員工，但我不能把這視為他們正在放棄 VR 的跡象，因為有兩點原因。第一，他們依然保留了 90%。而那 90% 確確實實比第二大的 VR 團隊還要大上 10 倍。我是說，所以他們在裁員之後，規模依然比最接近的競爭對手大上一個數量級。所以當我看到有人說，噢，他們對 VR 失去了信心，他們要轉向了。我的觀點是，你怎麼能這麼說？他們顯然仍然比任何人都更相信它。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=889s" target="_blank" rel="noopener noreferrer">14:49</a> 他們投入的資金比任何人都多。而他們做了一項調整，裁減了部分人員。而且請記住，這些職位都集中在少數特定領域。例如，他們已經決定不再涉足打造與其他開發者競爭的第一方遊戲應用程式業務。所以他們說，等等，好，我們不要去和 Ubisoft、Rockstar 以及 Capcom 競爭。我們就只與他們合作，而不是一邊試圖吸引他們加入我們的平台，一邊又在第一方遊戲作品上與他們競爭。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=919s" target="_blank" rel="noopener noreferrer">15:19</a> 所以沒錯，所有從事這項業務的人都被裁員了。我為處於那種境地的人感到難過，因為你知道，這關乎他們的生計。但在體諒那些人的同時，我也認為這對虛擬實境生態系來說是正確的決定。我認為從長遠來看，這會讓生態系更加強大，不再由最大的 VR 公司去與他們需要吸引到自家平台的電玩遊戲開發者競爭。因為有許多開發者會說，我甚至不想為 Meta Quest 進行開發。我何必呢？我是在跟他們自己的遊戲競爭。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=950s" target="_blank" rel="noopener noreferrer">15:50</a> 他們會把自己的遊戲放在商店的最顯眼位置。他們會為自己的遊戲投放所有廣告。他們會有更便宜、補貼更多的定價。在這種競爭下我要怎麼賺錢？我認為這基本上解決了那個問題。哇，你對這件事似乎相當有熱情。讓我請你回想一下。你是否有點希望自己還留在 Meta？我認為「有點希望」是正確的說法。我非常喜歡我在 Anduril 所做的事。我認為這正在產生巨大的影響。我認為這產生的影響，比我目前在 VR 產業所能產生的影響還要大。</p>
+<h2 id="sec-7">章節 7：Palmer Luckey 後悔離開 Facebook 嗎？（16:18）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=982s" target="_blank" rel="noopener noreferrer">16:22</a> 你還必須考慮到，這不僅僅是你是否希望自己還留在 Oculus，因為即使你把我放回 Oculus，也無法解決許多潛在的根本問題。例如，灣區的大多數人在政治立場上都與我非常對立，他們討厭我，也不想跟我共事。所以這很有趣，你知道，就像我真的希望自己回去嗎？不，我真正希望的是整個世界有所不同、一切運作方式都有所不同、時光能夠倒流，而且我回到了 Oculus。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1013s" target="_blank" rel="noopener noreferrer">16:53</a> 等等，首先你說整個科技圈在政治上都反對你。但現在似乎出現了相當大的轉變，你也是其中的一部分，還有 Peter Thiel 與 David Sacks。那確實說得沒錯。確實出現了一點轉變，所以我的抱怨有點過時了。但在很長一段時間裡，你確實必須捫心自問，你到底想要逆流而上，還是順流而行？我是說，有時我喜歡唱反調，但我更喜歡待在一條能讓我盡可能做成最多事的河流裡。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1044s" target="_blank" rel="noopener noreferrer">17:24</a> 那我們回頭談談被開除的事。</p>
+<h2 id="sec-8">章節 8：被 Facebook 開除與重新出發（17:25）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1047s" target="_blank" rel="noopener noreferrer">17:27</a> 你被開除基本上是因為你向一個支持川普的政治行動委員會（PAC）捐贈了 9,000 或 1 萬美元。然後他們說，噢不，那不是原因，這無關政治，但那完全不是實情。你是否希望當時能反擊並為自己的權利而戰？真實的答案是肯定的。你必須記得當時我才 24 歲。我是個年輕小夥子。我對這些事情完全沒有經驗。我想我大概、我大概本該更奮力反抗。但你也必須記住，一旦你被開除了，你就無法靠抗爭</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1081s" target="_blank" rel="noopener noreferrer">18:01</a> 重返崗位去掌管你在青少年時期創立的公司。你不可能透過提告來讓他們任命你當執行長，對吧？那種事是不可能的。你實際上在做的只是為過去打官司，也許能為未來拿到一些錢，但在這個過程中，你必須為那一項單一的努力投入大量的時間與精力。事實上比這還要糟糕。你只有在能夠證明損害的情況下才能拿到賠償金，對吧？你必須證明他們損害了你的名譽。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1111s" target="_blank" rel="noopener noreferrer">18:31</a> 通常這意味著你得證明，你知道，他們毀了你募資的能力、毀了你找人為你工作的能力。為了打贏這些訴訟，你基本上必須把自己的生活轉變成一個全職的職業受害者。所以我必須做出決定：我是否要用接下來 5 年的人生當個職業受害者，整天抱怨自己被毀得多慘，抱怨因為他們對我太差，我永遠不會有出息。你基本上等於把支配你的權力交給他們。你必須承認：「噢，我對自己的人生毫無掌控權。」唯一能掌控它的只有 Facebook，也就是買下我的公司、讓它成功的那些人。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1146s" target="_blank" rel="noopener noreferrer">19:06</a> 所以我必須做出選擇。我是要當個職業受害者，還是要創立一家新公司，證明我不是曇花一現，證明我不是別人口中的那個笨蛋？而我認為，以完美的後見之明來看，我做了、我做了、我做了正確的選擇。在理想的世界中，我也許既能為正義而戰，同時又能創立 Anduril，但很難想像我能同時有效地兼顧兩者。</p>
+<h2 id="sec-9">章節 9：為什麼 Elon Musk 是獨一無二的創業家（19:25）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1172s" target="_blank" rel="noopener noreferrer">19:32</a> 等等，你能想像自己像 Elon Musk 那樣，既掌管 Meta 的擴增實境（AR），同時又經營 Anduril 嗎？還是你認為你必須只專注於一件事？我認為 Elon 是一個非凡獨特的人物。我從未見過任何像他這樣的人。他是我見過唯一能有效做到那一點的人。人們會想，次佳的例子是什麼？就像 Jack Dorsey 同時掌管 Twitter 和 Square。賈伯斯同時掌管 Pixar 和 Apple。那確實很厲害，但你知道他已經過世了。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1204s" target="_blank" rel="noopener noreferrer">20:04</a> 所以……不過這說法也合理。但看看 Elon。他同時經營 SpaceX、Tesla，以及現在的 X 和 xAI。他真的是個極其獨特的人。我不知道有任何人能像他那樣做到。我當然不認為自己能做得到。而且我確實思考過這件事。你知道的，我有幾個這樣的小型副業專案。像是 ModRetro，這個線上社群現在正在製造復古遊戲機的復刻機，而我們打造了一款致敬任天堂 Game Boy 的作品。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1236s" target="_blank" rel="noopener noreferrer">20:36</a> 它基本上是一台超級 Game Boy，配備藍寶石螢幕鏡片和鋁鎂合金外殼。這是你能做出的最頂級 Game Boy，也是你能打造的最佳體驗，完美復刻了任天堂 Game Boy Color 的 LCD。但那只佔用我極少極少的時間。我同時也是一家生產冰淇淋捲餅的小眾冰淇淋公司的主要股東。我投入在上面的時間非常非常少。Anduril 佔據了我 99% 的時間。好，那我們就來聊聊 Anduril 吧。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1267s" target="_blank" rel="noopener noreferrer">21:07</a> 你坐在那裡，剛被 Facebook 開除。你有很多選擇。告訴我你是如何走上創辦國防產品公司這條路的？這個想法我已經思考了一段時間，我的幾位朋友也思考了一段時間。</p>
+<h2 id="sec-10">章節 10：Palmer Luckey 為何創立 Anduril（21:18）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1281s" target="_blank" rel="noopener noreferrer">21:21</a> 我們一直在討論美國在國防科技方面已經落後的事實。我們不再製造真正需要的工具，來嚇阻或贏得未來可能爆發的戰爭。而美國政府為各大國防公司所建立的激勵機制，顯然沒有促使他們去投資這類技術。與此同時，大型科技公司拒絕與國家安全體系合作。在美國歷史上從未出現過這種情況。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1314s" target="_blank" rel="noopener noreferrer">21:54</a> 從來沒有最具創新力的科技公司拒絕與美軍合作過。美國科技公司的標誌性傳統向來是與政府在此方面攜手合作，以捍衛自由、體制，甚至是讓他們能夠在國內和國際上營運的貿易環境。所以我說，好，如果大型科技巨頭不打算拯救我們，而國防公司也不打算拯救我們，那麼也許有些國防新創公司可以做點什麼。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1350s" target="_blank" rel="noopener noreferrer">22:30</a> 所以我和……我一開始並不想創立一家國防公司。我一開始只是想出資給其他國防公司。我想用我賺來的錢投資他們並提供協助。我其實在 Oculus 時就開始這麼做了。我就是這樣與 Founders Fund 的 Trae Stephens 取得聯繫的，因為他在 Founders Fund 的任務就是尋找下一個 SpaceX 或 Palantir，下一家能與政府做生意、價值數十億美元的公司。我想他已經與大約 2,000 家不同的公司會面過。那你認為他們決定投資了幾家？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1383s" target="_blank" rel="noopener noreferrer">23:03</a> 零家。並不是這些人不好。也不是他們不愛國，甚至不是他們不夠聰明。而是非常明確地，他們沒有任何人具備那一套技能、能力、魅力，或者無論是什麼特質，能打造一家足以與洛克希德、Northrop 或波音正面交鋒並真正取勝的公司。換句話說，就是從小裝置與小配件的供應商，轉型為下一代國防主承包商。所以當我被開除時，Trae 是我最先打電話的人之一，我說：「Trae，我想我們不該再試圖去投資一家在做這件事的國防公司了。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1417s" target="_blank" rel="noopener noreferrer">23:37</a> 我認為我們需要自己創立一家。」他說：「可是 Palmer，你打算怎麼辦？我以為你忙著 Facebook 的事。」我說：「啊，好吧，這是我願意付出的犧牲。」（笑聲）結果發展得相當順利。但你知道，這家公司從一開始的核心宗旨，就是透過每年賺取數百億美元，來為納稅人每年節省數千億美元。也就是製造更高效、更具成本效益的產品，並以最快速度完成，盡快推向市場。而我們做到了。</p>
+<h2 id="sec-11">章節 11：挑戰波音與洛克希德馬丁（24:05）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1445s" target="_blank" rel="noopener noreferrer">24:05</a> 那麼，告訴我有哪種大型系統你們能做得比波音和洛克希德更好？嗯，你知道，我不想太失禮，也不想點名批評別人。但我是說，一個顯而易見的例子——這不是由我評判，而是由美國空軍評判的——就是我們最近在空軍 CCA 計畫中的成功，也就是協同作戰飛機（CCA）計畫，基本上就是為美國空軍打造由 AI 驅動的戰鬥機。我們的飛機 Fury（現在獲得空軍型號代號 FQ-44），在 CCA Increment 1 合約中擊敗了 Northrop、波音和洛克希德。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1483s" target="_blank" rel="noopener noreferrer">24:43</a> 我想這將會是眾多勝利中的第一場。我想我們在其他一些較小規模的項目上也有零星獲勝。我想你會看到我們以固定的節奏贏得重大計畫 因為我們過去 8 年來的投資終於有了回報，大家即將開始看到這些樹結出的果實。看起來，像是 Alex Karp 的 Palantir、Elon Musk 的 SpaceX，</p>
+<h2 id="sec-12">章節 12：Anduril 的商業模式：先做再賣（25:03）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1507s" target="_blank" rel="noopener noreferrer">25:07</a> 以及你們，都有這種不同的模式，不是受政府委託去做某件事。而是你們先做出產品，然後說：「這個你們用得上。」是這樣嗎？沒錯。所以我們用我們籌集和賺來的錢，決定要打造什麼產品、打造它們、決定何時完成，然後賣給客戶。有時我們會與客戶攜手開發，當然也有些時候客戶會因為想做某些特定事情而分擔成本。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1539s" target="_blank" rel="noopener noreferrer">25:39</a> 但總體而言，Anduril 是一家產品公司，而不是承包商。在政府給我們一毛錢之前，我們就已經投入了數十億美元在這些事物上。而且我們這裡說的可不是幾個月而已。我的意思是，我們有的飛機已經開發了 5 年，直到現在才第一次從政府那裡拿到錢。而且我想這實際上是一種健康得多的模式。它讓你保持敏銳得多。它確保你絆倒跌跤時會擦破膝蓋，而這正是讓你時刻保持警惕的原因。我們來談談 Anduril 這個名字，它當然出自《魔戒》，是代表正義力量的寶劍。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1575s" target="_blank" rel="noopener noreferrer">26:15</a> 你認為自己在這裡帶有一種道德層面的成分嗎？比如你會為了民主和美國利益而奮鬥？</p>
+<h2 id="sec-13">章節 13：製造武器的倫理（26:18）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1585s" target="_blank" rel="noopener noreferrer">26:25</a> 是的。我認為 Anduril 的理念之一，就是我們不是一家政治中立、道德中立或倫理中立的公司。我們想打造一家與捍衛言論自由、自治自由等權利的國家合作的公司，你知道，這些理念，也許不是每個國家都完全同意，或者彼此並不總是完全步調一致，但我們大致上都同意這些事情很重要。而世界上有很多國家並不認為這些重要。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1617s" target="_blank" rel="noopener noreferrer">26:57</a> 同時，我也確實體認到，說到底我們某種程度上是受制於美國政府的。美國政府不希望我賣給哪個國家，我就不能賣給那個國家。他們希望與之合作的任何盟友，我們也必須與之合作。我認為事情本來就必須是這個樣子。無論我的道德立場或倫理立場為何，我生活在一個我們已經決定將這些決策責任委託給憲政共和國的國家，委託給我們所有人都能要求為那些決策負責的民選官員。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1650s" target="_blank" rel="noopener noreferrer">27:30</a> 所以有時會有人對我說：那麼，Palmer，你對倫理的承諾是否延伸到，例如說你要幫助某個國家或不幫助另一個國家？我必須向大家指出的是，你不會想生活在一個由少數幾位武器企業主管實質控制美國外交政策的世界裡。那不應該是像我這樣的高階主管能夠做的決定。讓我們負起責任的唯一方法，就是讓我們成為美國政府政策的延伸。否則，你最終會面臨非常非常詭異的權力動態，你可以想像一個世界，</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1683s" target="_blank" rel="noopener noreferrer">28:03</a> 洛克希德馬丁的執行長比美國總統擁有更大權力，而這大概不是一件好事。</p>
+<h2 id="sec-14">章節 14：Lattice：Anduril 背後的 AI 大腦（28:08）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1688s" target="_blank" rel="noopener noreferrer">28:08</a> 跟我聊聊軟體平台 Lattice，以及它是如何構成你們正在做的許多事情的基礎。Lattice 是我們所打造的軟體集合，為我們所有不同的產品提供驅動力。它算是 AI 大腦，驅動著我們的飛彈、潛艦、戰鬥機、感測塔，以及我們製造的 25 種以上所有產品。而它真正關鍵之處在於，我們可以把所有這些系統串聯在一起。讓它們能互相通訊、非常無縫地協同工作，使得每個感測器都是其他每個系統的眼睛，每個武器都是每個大腦可調用的系統。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1726s" target="_blank" rel="noopener noreferrer">28:46</a> 以這種方式將它們串聯在一起，是一種思考自主系統的非常不同的方式。而且從投資報酬率的角度來看，這對我也非常好，因為如果我投入 1 美元去改善飛機的機翼，唯一變好的就只有那一架飛機的機翼。如果我投入 1 美元讓 Lattice 變得更好，所有使用 Lattice 的東西都會跟著變好。於是你就有了這種乘數效應，投入其中的數十億美元，現在轉化成了投資在數十種使用它的產品上的數十億美元。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1761s" target="_blank" rel="noopener noreferrer">29:21</a> 而且在 Anduril，投入在 Lattice 上的研發人數，實際上和我們所有硬體產品的人數總和一樣多。它就是這麼重要。</p>
+<h2 id="sec-15">章節 15：該讓 AI 不經人類核准就殺人嗎？（29:29）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1769s" target="_blank" rel="noopener noreferrer">29:29</a> 那麼目的是要製造自主武器嗎？是的。那你覺得這有問題嗎？或者也許沒有問題？讓無人機或自主系統在沒有人在迴路中的情況下做出擊殺決定？我認為這是唯一理性且符合道德的結果或決定。生死攸關的決定牽涉太多道德問題且太過重要，不能不動用你擁有的最強大科技。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1802s" target="_blank" rel="noopener noreferrer">30:02</a> 這甚至不是關於用不用 AI 的爭論。只是剛好現在大家都在談 AI，因為它正熱門且常上新聞。但歸根結底，關鍵在於你是否想使用能夠可衡量且可證明帶來最低附帶損害的最佳技術，帶來最少平民傷亡、最高水準精準度的技術？有些人寧願接受更多的附帶損害、更多的平民喪生，以換取不允許使用自主武器。假設你有一枚自主地雷，能分辨俄羅斯坦克和一輛載滿孩子的校車。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1838s" target="_blank" rel="noopener noreferrer">30:38</a> 世界上有些人認真主張，寧可用一枚會炸毀那輛載滿孩子校車的笨地雷，只要不是由機器人來決定誰生誰死就好。我實在無法苟同這一點。我無法站在那一邊。人們會指出一些問題，比如：要是它犯了這種類型的錯誤呢？要是它做了這個呢？要是它做了那個呢？而我的觀點是，那我們就去規範它。我們來規範這些演算法的品質。我們來規範它們的輸出。我們來規範它們的使用方式。我們來確保在它們被使用或濫用時，能讓人承擔責任。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1869s" target="_blank" rel="noopener noreferrer">31:09</a> 但例如當聯合國有人呼籲禁止所謂的致命自主武器系統（LAWS），並說出一些聽起來很漂亮的口號時。「難道你不同意機器人絕不應該決定誰生誰死嗎？」這作為宣傳標語聽起來很棒，但它實際上導致的結果是，你等於承諾只製造無法分辨真正作戰人員與平民的笨武器。那就是無法區分正確建築與錯誤建築的武器。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1900s" target="_blank" rel="noopener noreferrer">31:40</a> 等等，如果我說錯了請糾正我，但你剛才批評的正是美軍的軍事準則。我的意思是，像 Creech 空軍基地這樣的地方，他們的無人機飛遍整個中東，但那裡有人坐著盯著螢幕，而且他們必須在迴路中。</p>
+<h2 id="sec-16">章節 16：自主武器之爭（31:56）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1916s" target="_blank" rel="noopener noreferrer">31:56</a> 你認為美軍的軍事準則是錯的嗎？我認為他們的準則是受限於他們現有技術的極限而形成的。所以我認為就目前而言，這是很好的準則。到目前為止，我們所擁有的自主水準，機器做出該決定的水準一直以來 都是如此粗糙且品質低劣，以至於全面交給機器本來就會是個非常糟糕的主意。這就是為什麼我說這其實不是關於 AI。而是關於，你知道，它是否是正確的工具？你也必須記住，自主性在許多方面是在消除失效模式。像是你可能聽說過有人入侵未加密的 Predator 視訊串流。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1951s" target="_blank" rel="noopener noreferrer">32:31</a> 想想看，當你有一個甚至不需要也不會在任務中使用無線電的自主系統時，所有問題就都迎刃而解了。就像你消除了許多遠端遙控系統中的網路資安漏洞。同樣的，必須有人按下最終擊殺決定按鈕的要求，也可能變成一種途徑，讓每項武器都可能被敵人劫持，進而命令它做出錯誤的行動。所以我認為準則是由他們所擁有的武器決定的。而且你說的大致上沒錯。比如對 Predator 無人機來說確實如此。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=1982s" target="_blank" rel="noopener noreferrer">33:02</a> 必須有人在迴路中。他們必須看清現場狀況。他們必須按下那個按鈕。但美國自越戰以來就一直在使用反輻射飛彈，對吧？你把飛彈發射到視距外。你就再也看不到它了。它會尋找特定的射頻發射源，然後衝向那個目標。但美國有很多武器系統已經自行做出擊殺決定了。只是那些都是非常特定的擊殺決定。所以我認為 AI 也會是同樣的方式。嗯，我的意思是，你是對的。地雷完全是自主的。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2012s" target="_blank" rel="noopener noreferrer">33:32</a> 嗯，現在你觸及了另一個非常有趣的辯論。我幾年前做過一次演講，主張自主武器實際上已有數千年的歷史。所以地雷就是個絕佳的例子。它們是自主武器。多年來一直有些地雷會忽略某些類型的目標並攻擊其他類型，主要取決於施加在壓力板上的重量或目標的磁性特徵。所以你有一個系統在決定該殺誰、不該殺誰。它們的邏輯是：我們會忽略汽車，但大型裝甲車會有更大的，你知道，</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2044s" target="_blank" rel="noopener noreferrer">34:04</a> 含鐵質量，會有更大的磁性特徵，而我就會把它炸飛。但如果你真的想追溯，你其實可以發現像陷坑這種東西也是以同樣方式建造的。那些陷坑允許人從上面走過，但馬匹會突然踩破並掉下去，這樣它們就不會抓到步兵，而是會抓住後面騎在馬上的高階軍官。所以人們一直以來都在製造這樣的武器：由人運用科技力量設計，在戰場上、在武器所在之處決定誰生誰死。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2076s" target="_blank" rel="noopener noreferrer">34:36</a> 我認為用 AI 來做這件事，跟利用陷坑上竹子的厚度來做，實際上並沒有本質上的不同。它們都是同一枚硬幣的兩面。關鍵在於必須有人對武力的使用負責，當它們被濫用時必須有人承擔責任，而且製造和使用它們的人必須意識到這些東西存在著問題。你知道，就像如果你在錯誤的街道中央挖了陷坑，你知道，接下來發生什麼事你都必須負責。你不能說：「噢，我不是故意要讓陷坑殺錯人的。」</p>
+<h2 id="sec-17">章節 17：未來戰爭會由機器人取代士兵嗎？（35:06）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2110s" target="_blank" rel="noopener noreferrer">35:10</a> 我想 AI 武器也是一樣的。你能否無論是用你的科幻大腦，還是用你的 Anduril 大腦，想像未來的戰爭幾乎完全是由非常聰明的機器進行，其中即使有人死亡，也極為少數？我的意思是，我對此進行過很多討論，而要表達我接下來想說的觀點，很難不讓人立刻嚴厲斥責你，並試圖以最不友善的角度來解讀它。但我會說，我們基本上已經生活在那種情況的早期版本中了。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2144s" target="_blank" rel="noopener noreferrer">35:44</a> 你看看現代戰爭，以及過去差不多 30 年來發生的許多戰爭，一般來說，死於戰爭的人數少得多了。像是精準導引炸彈的發明，讓許多傳統轟炸戰役的戰術完全失去意義，而且看似野蠻，對吧？美國和我們的盟友在二戰期間所做的事，在今天會被視為戰爭罪行，因為我們現在已經非常擅長精準打擊作戰了。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2176s" target="_blank" rel="noopener noreferrer">36:16</a> 人們對你大加斥責的原因是，他們會說：「Palmer，當你談論的是成千上萬人時，你怎麼能說戰爭是人道的，或者沒人死亡呢？」顯然那很可怕，但別忘了，在當代人的記憶中，我們經歷過造成數千萬人死亡的戰爭。我的意思是，看看俄羅斯的傷亡、中國的傷亡、德國的傷亡，簡直是難以想像的生命損失。所以我認為，我們在這個尺度上其實已經往下走了大約 90%。我們現在某種程度上只是在微小的邊際差異上爭論。比如，戰爭是否會發展到只有極少數人參與，大部分都是機器的地步？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2209s" target="_blank" rel="noopener noreferrer">36:49</a> 我其實會主張，我們已經走完大半了。這就是為什麼我不認為這實際上會帶來多大的差異。人們會說：「Palmer，你知道未來的戰爭，難道不意味著發動戰爭的門檻會大幅降低嗎？」而我的觀點是：各位，我們其實已經處於那種狀態了。戰爭現在帶來的附帶損害就是不再像過去那麼嚴重了。所以我非常能夠想像一個世界，雖然你無法消除所有人類的死亡。但我認為我們將達到大多數傷亡都是機器人、</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2240s" target="_blank" rel="noopener noreferrer">37:20</a> 系統和硬體，而不是血肉之軀的境地。而且我想，我們已經完成了 90% 的進程，這大概是一件好事。嗯，難道你不認為你們的技術最終能遏阻的戰爭，會比引發的戰爭還要多嗎？</p>
+<h2 id="sec-18">章節 18：AI 武器能阻止與中國開戰嗎？（37:31）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2256s" target="_blank" rel="noopener noreferrer">37:36</a> 那當然是我們的期望。我認為有趣的是，Anduril 越成功，我們獲得的功勞反而越少。所以現在就已經有人在說：「噢，但 Palmer 認為我們會跟中國打這場仗。」嗯，目前看起來確實還沒發生任何事。有趣的是，假設 20 年後我們都還沒跟中國開戰，那在很大程度上將不僅是因為 Anduril，而是因為有數十家其他公司都對此有所貢獻，數十個國家都對此做出了重大貢獻。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2291s" target="_blank" rel="noopener noreferrer">38:11</a> 我們能避免開戰的唯一原因，是我們精心建構了一個讓中國覺得自己無法輕舉妄動的世界。惱人的是，大家看到這樣會以為這本來就是自然而然的狀態，而不是一座經過精心設計的美麗花園。那確實讓人感到有點沮喪。另一方面，如果我們最終真的跟中國開戰，而且 Anduril 的系統常態性地被使用，那些人就會說：「哇，我錯了。」「幸好我們有 Anduril。」但到了那個地步，我們其實就已經輸了，對吧？</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2323s" target="_blank" rel="noopener noreferrer">38:43</a> 當你真的在打仗的時候，就意味著你當初沒有把花園建好。</p>
+<h2 id="sec-19">章節 19：人工智慧最大的危險（38:51）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2331s" target="_blank" rel="noopener noreferrer">38:51</a> 我們在 The Builders 節目中還會邀請的另一位來賓是李飛飛（Fei-Fei Li），你也認識她。她說過，AI 是一項我們才剛開始理解的強大工具，而那是一份深遠的責任。面對 AI 這項工具，我們目前應該釐清的責任有哪些？我是說，我最擔心的第一件事，因此我認為這大概也是責任最大的領域。我不是一個支持審查的人。我並不喜歡限制 AI 不能做某些事。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2364s" target="_blank" rel="noopener noreferrer">39:24</a> 但如果我要挑一個領域進行某種程度的責任要求、管制或審查，那會是關於將人工智慧應用於製造生物與化學武器。有很多唾手可得的東西，過去一直是人們碰不到的，因為它們深埋在學術知識中，需要達到一定門檻才能勉強看得懂。AI 讓人們能夠在進行極其可怕的事情的鏈條上走得更遠。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2399s" target="_blank" rel="noopener noreferrer">39:59</a> 你大概也看過人們正在做的一些事，有些實驗室正在進行新藥研發，AI 基本上是在告訴他們該做哪些實驗、該混合哪些化合物，明確指示他們在實驗室的操作步驟是什麼。基本上你不需要博士。你只需要照著操作說明做這些事、進行測試、並把結果反饋給 AI 的實驗室技術人員。他們基本上是把人當作血肉機器人來幫他們做所有的事。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2430s" target="_blank" rel="noopener noreferrer">40:30</a> 我們距離某個人能夠製造出相當可怕的生物武器已經不遠了，而且 在實驗室工作的人完全不知道自己正在做這件事，任何機器也沒有察覺到。就責任而言，我認為有非常強烈的理由去移除某些資料元素，或者特別竄改這些資料以使其失效，除非你身處被允許獲取這些內容的機構中。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2463s" target="_blank" rel="noopener noreferrer">41:03</a> 有人會說：「但是 Palmer，這些工具對於研發藥物也很有用。」但我認為這是一種不對稱的情況。我同意。這可能意味著，青少年不再能不隸屬任何實驗室、自己在車庫裡研發出新的藥物化合物。而那是我願意承受的損失，只要能讓人無法設計出專門依族裔、種族或其他生物標記來消滅人類的生物武器，或自以為在做這種事卻沒做成。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2496s" target="_blank" rel="noopener noreferrer">41:36</a> 我對那種事感到恐懼。所以如果要對 AI 課予責任，我認為我們應該專注於能夠自我複製、並在資料中心以外的真實世界中存活的事物。好，最後一個問題。</p>
+<h2 id="sec-20">章節 20：自動化如何讓 1,000 美元的汽車成真（41:48）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2509s" target="_blank" rel="noopener noreferrer">41:49</a> 我想請你選一件你認為未來會非常酷、而且你想去做的事。下一個很酷的事情是什麼？噢，這太難了。我只能選一個嗎？我只能挑一個？選兩個。噢，兩個。好。我想我很期待的事情之一，是發電、製造產能、加工產能與回收產能的垂直整合，我認為這將會讓製造許多物品變得極其便宜。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2543s" target="_blank" rel="noopener noreferrer">42:23</a> 就像你在紡織製造業看到的機械化，以單位成本來看，布料現在比過去便宜了大約 1,000 倍。我認為你會看到這種情況應用在汽車上。你會看到它應用在消費型電子產品上。我認為你會在許多日常用品上看到這一點，因為開採、加工、回收成本與製造成本，加總起來會低到讓我們能量產電視和汽車，就像我們大批生產成卷的布料一樣容易。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2574s" target="_blank" rel="noopener noreferrer">42:54</a> 我認為花 1,000 美元就能買到一輛車的世界，不管你怎麼計入通膨調整，我認為那在我們有生之年其實就能實現。所以我對此非常、非常期待。就是透過自動化、垂直整合與共址設置，讓生活基本必需品的成本大幅降低。第二個大概會是到海洋定居。</p>
+<h2 id="sec-21">章節 21：海上城市的未來（43:13）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2594s" target="_blank" rel="noopener noreferrer">43:14</a> 外面有那麼大一片海洋。那裡有很大的空間。那裡有豐富的糧食、能源潛力與空間潛力，而直到目前為止，我們沒有到海洋定居的主要原因，一直都是工程上的限制。我認為材料科學的新進展讓這不再是那麼大的問題，因此我認為我們將會發展到一個階段，能夠在海上建造維持數千年而不需要任何重大維護的巨型結構，</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2625s" target="_blank" rel="noopener noreferrer">43:45</a> 而那將會是一件非常、非常有趣的事，會在許多層面上重組經濟與政治體系。</p>
+<h2 id="sec-22">章節 22：科幻為何能預言未來（43:52）</h2>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2632s" target="_blank" rel="noopener noreferrer">43:52</a> 這話是出自一個讀過凡爾納的小孩之口，對吧？（笑聲）聽著，我得說預測未來最好的方法就是去打造它，但我認為人們最後打造的，往往就是科幻作家擺在他們眼前的那種未來，所以我不敢說自己曾想出過任何比我讀過的科幻小說家更好的點子，但沒錯，我非常相信海上家園（seasteading）的概念。我認為這個浪潮會捲土重來。它現在雖然退流行了，但它會回來的。</p>
+<p><a href="https://www.youtube.com/watch?v=Wj00YlDuWXc&amp;t=2662s" target="_blank" rel="noopener noreferrer">44:22</a> Palmer Luckey，感謝你接受我們的訪問。謝謝。</p>
+</article></main>
+<footer>
+<p>本頁為非官方翻譯，由 AI 模型翻譯，依 YouTube 機器字幕整理，未經人工校稿；聽音片段涵蓋約 107 句，至少約 417 句未對照原音；影片版權屬原權利人。另見：<a href="index.html">深度導讀</a>、<a href="player.html">字幕同步播放器</a>。</p>
+</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+</body>
+</html>

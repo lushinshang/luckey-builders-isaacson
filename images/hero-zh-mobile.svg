@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 540" width="540" height="540" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>封面：從一個起點向外延伸（抽象示意）</title>
+<desc>抽象示意圖，沒有文字、人像或任何產品外觀。米色底上有一個深色起點，數條灰色細線從起點呈扇形向右上方放射，末端各有一顆小圓點；一條橘色弧線從起點向上攀升，之後逐漸平緩。弧線以淡色底稿完整顯示，載入後描深一次並停在完整畫面，之後只有圓點極慢地微弱明暗變化；系統設定減少動態效果時直接顯示完整靜態畫面。</desc>
+<rect width="540" height="540" fill="#f9f7f4"/>
+<style>
+.draw{animation:draw 4.7s cubic-bezier(.45,.05,.35,1) 0.3s both}
+@keyframes draw{from{stroke-dashoffset:1.05}to{stroke-dashoffset:0}}
+.breathe{animation:breathe 10s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.9}50%{opacity:.72}}
+.b1{animation-delay:-2.5s}.b2{animation-delay:-5s}.b3{animation-delay:-7.5s}
+@media (prefers-reduced-motion: reduce){.draw,.breathe{animation:none}}
+</style>
+<defs>
+<mask id="m-arc" maskUnits="userSpaceOnUse" x="0" y="0" width="540" height="540"><path d="M96 446 C136 196 236 136 474 128" fill="none" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke="#8f8f8f"/><path class="draw" d="M96 446 C136 196 236 136 474 128" fill="none" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke="#fff" pathLength="1" stroke-dasharray="1 2"/></mask>
+</defs>
+<circle cx="96" cy="446" r="80" fill="#f8e9dd" opacity=".5"/>
+<circle cx="96" cy="446" r="36.0" fill="none" stroke="#8a8f99" stroke-width="1.2" stroke-dasharray="3 9" opacity=".45"/>
+<circle cx="96" cy="446" r="68.0" fill="none" stroke="#8a8f99" stroke-width="1.2" stroke-dasharray="3 9" opacity=".45"/>
+<line x1="96" y1="446" x2="294.5" y2="421.6" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="379.7" y2="348.3" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="312.5" y2="321.0" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="243.2" y2="318.1" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="188.3" y2="327.8" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="144.8" y2="354.2" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="438.4" y2="373.2" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<line x1="96" y1="446" x2="426.8" y2="291.7" stroke="#8a8f99" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+<path mask="url(#m-arc)" d="M96 446 C136 196 236 136 474 128" fill="none" stroke="#d9773a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="474" cy="128" r="8" fill="#d9773a"/>
+<g class="breathe" opacity=".9"><circle cx="294.5" cy="421.6" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="294.5" cy="421.6" r="8" fill="#4a6fa5"/><circle cx="188.3" cy="327.8" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="188.3" cy="327.8" r="8" fill="#4a6fa5"/></g>
+<g class="breathe b1" opacity=".9"><circle cx="379.7" cy="348.3" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="379.7" cy="348.3" r="8" fill="#4a6fa5"/><circle cx="144.8" cy="354.2" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="144.8" cy="354.2" r="8" fill="#4a6fa5"/></g>
+<g class="breathe b2" opacity=".9"><circle cx="312.5" cy="321.0" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="312.5" cy="321.0" r="8" fill="#4a6fa5"/><circle cx="438.4" cy="373.2" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="438.4" cy="373.2" r="8" fill="#4a6fa5"/></g>
+<g class="breathe b3" opacity=".9"><circle cx="243.2" cy="318.1" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="243.2" cy="318.1" r="8" fill="#4a6fa5"/><circle cx="426.8" cy="291.7" r="16" fill="#4a6fa5" opacity=".16"/><circle cx="426.8" cy="291.7" r="8" fill="#4a6fa5"/></g>
+<circle class="breathe" cx="96" cy="446" r="27" fill="#d9773a" opacity=".9" fill-opacity=".22"/>
+<circle cx="96" cy="446" r="13" fill="#1d2433"/>
+</svg>
